@@ -7,15 +7,27 @@ using PokerHandExercise.Classes.Hands;
 
 namespace PokerHandExercise.Tests.Tests
 {
+
+    // In line with the conceptual design lets first comment out the original comparer tests, and use InternalsVisibleTo to
+    // ensure that the internal abstract factory returns us the correct "specified poker hand". It's a good starting
+    // point and sanity check. Once done, one can concentrate on the comparisons.
+
+    // Apply test driven-development by using the UML class diagram design as a basis for the expected class structure.
+    // Write the test -> Get it to fail -> Implement the code -> Pass the test -> Refactor -> begin again...
+
     [TestClass]
     public class PokerHandFactoryTests
     {
-        private SpecifiedPokerHand SpecifiedPokerHand(PokerHand pokerHand)
+        [TestMethod]
+        public void Factory_WhenPassed_A_LowFullHouse_Combination_Returns_A_FullHouse()
         {
-            PokerHandFactory pokerHandFactory = new PokerHandFactory();
-            SpecifiedPokerHand specifiedPokerHand = pokerHandFactory.Create(pokerHand);
+            Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateLowFullHouse()) is FullHouse);
+        }
 
-            return specifiedPokerHand;
+        [TestMethod]
+        public void Factory_WhenPassed_A_HighFullHouse_Combination_Returns_A_FullHouse()
+        {
+            Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateHighFullHouse()) is FullHouse);
         }
 
         [TestMethod]
@@ -33,41 +45,34 @@ namespace PokerHandExercise.Tests.Tests
         [TestMethod]
         public void Factory_WhenPassed_A_HighStraightFlush_Combination_Returns_A_StraightFlush()
         {
-            PokerHand pokerHand = PokerHandTestHelper.CreateHighStraightFlush();
-            PokerHandFactory pokerHandFactory = new PokerHandFactory();
-            SpecifiedPokerHand specifiedPokerHand = pokerHandFactory.Create(pokerHand);
-
-            Assert.IsTrue(specifiedPokerHand is StraightFlush);
+            Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateHighStraightFlush()) is StraightFlush);
         }
 
         [TestMethod]
         public void Factory_WhenPassed_A_MidStraightFlush_Combination_Returns_A_StraightFlush()
         {
-            PokerHand pokerHand = PokerHandTestHelper.CreateMidStraightFlush();
-            PokerHandFactory pokerHandFactory = new PokerHandFactory();
-            SpecifiedPokerHand specifiedPokerHand = pokerHandFactory.Create(pokerHand);
-
-            Assert.IsTrue(specifiedPokerHand is StraightFlush);
+            Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateMidStraightFlush()) is StraightFlush);
         }
 
         [TestMethod]
         public void Factory_WhenPassed_A_AceLowStraightFlush_Combination_Returns_A_StraightFlush()
         {
-            PokerHand pokerHand = PokerHandTestHelper.CreateAceLowStraightFlush();
-            PokerHandFactory pokerHandFactory = new PokerHandFactory();
-            SpecifiedPokerHand specifiedPokerHand = pokerHandFactory.Create(pokerHand);
-
-            Assert.IsTrue(specifiedPokerHand is StraightFlush);
+            // could use this assertion, but i prefer the "IsTrue" which I feel is more readable.
+            Assert.IsInstanceOfType(SpecifiedPokerHand(PokerHandTestHelper.CreateAceLowStraightFlush()), typeof(StraightFlush));
         }
 
         [TestMethod]
         public void Factory_WhenNotPassed_A_HighThreeOfAKind_Combination_DoesNot_Return_A_StraightFlush()
         {
-            PokerHand pokerHand = PokerHandTestHelper.CreateHighThreeOfAKind();
+            Assert.IsFalse(SpecifiedPokerHand(PokerHandTestHelper.CreateHighThreeOfAKind()) is StraightFlush);
+        }
+
+        private SpecifiedPokerHand SpecifiedPokerHand(PokerHand pokerHand)
+        {
             PokerHandFactory pokerHandFactory = new PokerHandFactory();
             SpecifiedPokerHand specifiedPokerHand = pokerHandFactory.Create(pokerHand);
 
-            Assert.IsFalse(specifiedPokerHand is StraightFlush);
+            return specifiedPokerHand;
         }
     }
 }

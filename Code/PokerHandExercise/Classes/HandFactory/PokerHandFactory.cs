@@ -20,6 +20,10 @@ namespace PokerHandExercise.Classes.HandFactory
             if (fourOfAKindSpecification.IsSatisfiedBy(pokerHand))
                 return new FourOfAKind(pokerHand);
 
+            FullHouseSpecification fullHouseSpecification = new FullHouseSpecification();
+            if (fullHouseSpecification.IsSatisfiedBy(pokerHand))
+                return new FullHouse(pokerHand);
+
             return null;
         }
     }

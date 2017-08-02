@@ -67,5 +67,25 @@ namespace PokerHandExercise.Tests.Tests
             var result = _comparer.CompareHands(pokerHand1, pokerHand2);
             Assert.AreEqual(0, result, "Expected Hand1 and Hand2 be equivalent");
         }
+
+        [TestMethod]
+        public void Comparer_WhenComparingHighFullHouse_ToLowFullHouse_EnsuresHigh_Wins()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateHighFullHouse();
+            var pokerHand2 = PokerHandTestHelper.CreateLowFullHouse();
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(1, result, "Expected Hand1 to beat Hand2");
+        }
+
+        [TestMethod]
+        public void Comparer_WhenComparingLowFullHouse_ToHighFullHOuse_EnsuresLow_Loses()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateLowFullHouse();
+            var pokerHand2 = PokerHandTestHelper.CreateHighFullHouse();
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(-1, result, "Expected Hand1 to lose to Hand2");
+        }
     }
 }
