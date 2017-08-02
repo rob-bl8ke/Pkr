@@ -1,4 +1,5 @@
-﻿using PokerHandExercise.Classes.Hands;
+﻿using PokerHandExercise.Classes.HandFactory.HandSpecifications;
+using PokerHandExercise.Classes.Hands;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,11 @@ namespace PokerHandExercise.Classes.HandFactory
     {
         internal SpecifiedPokerHand Create(PokerHand pokerHand)
         {
-            throw new NotImplementedException();
+            StraightFlushSpecification straightFlushSpecifiation = new StraightFlushSpecification();
+            if (straightFlushSpecifiation.IsSatisfiedBy(pokerHand))
+                return new StraightFlush();
+
+            return null;
         }
     }
 }

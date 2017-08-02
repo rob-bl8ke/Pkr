@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="Classes\Card.cs" />
     <Compile Include="Classes\Constants.cs" />
+    <Compile Include="Classes\HandFactory\HandSpecifications\IPokerHandSpecification.cs" />
+    <Compile Include="Classes\HandFactory\HandSpecifications\StraightFlushSpecification.cs" />
     <Compile Include="Classes\HandFactory\PokerHandFactory.cs" />
     <Compile Include="Classes\Hands\StraightFlush.cs" />
     <Compile Include="Classes\IPokerHandComparer.cs" />
