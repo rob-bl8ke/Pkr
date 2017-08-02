@@ -16,6 +16,10 @@ namespace PokerHandExercise.Classes.HandFactory
             if (straightFlushSpecification.IsSatisfiedBy(pokerHand))
                 return new StraightFlush(pokerHand);
 
+            FourOfAKindSpecification fourOfAKindSpecification = new FourOfAKindSpecification();
+            if (fourOfAKindSpecification.IsSatisfiedBy(pokerHand))
+                return new FourOfAKind(pokerHand);
+
             return null;
         }
     }

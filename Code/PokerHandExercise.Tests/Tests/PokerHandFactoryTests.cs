@@ -10,6 +10,26 @@ namespace PokerHandExercise.Tests.Tests
     [TestClass]
     public class PokerHandFactoryTests
     {
+        private SpecifiedPokerHand SpecifiedPokerHand(PokerHand pokerHand)
+        {
+            PokerHandFactory pokerHandFactory = new PokerHandFactory();
+            SpecifiedPokerHand specifiedPokerHand = pokerHandFactory.Create(pokerHand);
+
+            return specifiedPokerHand;
+        }
+
+        [TestMethod]
+        public void Factory_WhenPassed_A_LowFourOfAKind_Combination_Returns_A_FourOfAKind()
+        {
+            Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateLowFourOfAKind()) is FourOfAKind);
+        }
+
+        [TestMethod]
+        public void Factory_WhenPassed_A_StraightFlush_Combination_DoesNot_Return_A_FourOfAKind()
+        {
+            Assert.IsFalse(SpecifiedPokerHand(PokerHandTestHelper.CreateAceLowStraightFlush()) is FourOfAKind);
+        }
+
         [TestMethod]
         public void Factory_WhenPassed_A_HighStraightFlush_Combination_Returns_A_StraightFlush()
         {
