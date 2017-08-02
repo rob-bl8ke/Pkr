@@ -28,6 +28,10 @@ namespace PokerHandExercise.Classes.HandFactory
             if (flushSpecification.IsSatisfiedBy(pokerHand))
                 return new Flush(pokerHand);
 
+            StraightSpecification straightSpecification = new StraightSpecification();
+            if (straightSpecification.IsSatisfiedBy(pokerHand))
+                return new Straight(pokerHand);
+
             return null;
         }
     }

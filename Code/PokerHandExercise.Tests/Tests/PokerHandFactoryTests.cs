@@ -19,6 +19,18 @@ namespace PokerHandExercise.Tests.Tests
     public class PokerHandFactoryTests
     {
         [TestMethod]
+        public void Factory_WhenPassed_A_LowStraight_Combination_Returns_A_Straight()
+        {
+            Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateLowStraight()) is Straight);
+        }
+
+        [TestMethod]
+        public void Factory_WhenPassed_A_HighStraight_Combination_Returns_A_Straight()
+        {
+            Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateHighStraight()) is Straight);
+        }
+
+        [TestMethod]
         public void Factory_WhenPassed_A_LowFlush_Combination_Returns_A_Flush()
         {
             Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateLowFlush()) is Flush);
@@ -74,7 +86,7 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
-        public void Factory_WhenNotPassed_A_HighThreeOfAKind_Combination_DoesNot_Return_A_StraightFlush()
+        public void Factory_WhenPassed_A_HighThreeOfAKind_Combination_DoesNot_Return_A_StraightFlush()
         {
             Assert.IsFalse(SpecifiedPokerHand(PokerHandTestHelper.CreateHighThreeOfAKind()) is StraightFlush);
         }
