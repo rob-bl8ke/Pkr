@@ -40,6 +40,10 @@ namespace PokerHandExercise.Classes.HandFactory
             if (twoPairSpecification.IsSatisfiedBy(pokerHand))
                 return new TwoPair(pokerHand);
 
+            PairSpecification pairSpecification = new PairSpecification();
+            if (pairSpecification.IsSatisfiedBy(pokerHand))
+                return new Pair(pokerHand);
+
             return null;
         }
     }

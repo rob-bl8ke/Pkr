@@ -19,6 +19,18 @@ namespace PokerHandExercise.Tests.Tests
     public class PokerHandFactoryTests
     {
         [TestMethod]
+        public void Factory_WhenPassed_A_LowPair_Combination_Returns_A_Pair()
+        {
+            Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateLowPair()) is Pair);
+        }
+
+        [TestMethod]
+        public void Factory_WhenPassed_A_HighPair_Combination_Returns_A_Pair()
+        {
+            Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateHighPair()) is Pair);
+        }
+
+        [TestMethod]
         public void Factory_WhenPassed_A_LowTwoPair_Combination_Returns_A_TwoPair()
         {
             Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateLowTwoPairs()) is TwoPair);

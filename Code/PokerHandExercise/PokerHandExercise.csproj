@@ -46,6 +46,7 @@
     <Compile Include="Classes\HandFactory\HandSpecifications\FourOfAKindSpecification.cs" />
     <Compile Include="Classes\HandFactory\HandSpecifications\FullHouseSpecification.cs" />
     <Compile Include="Classes\HandFactory\HandSpecifications\IPokerHandSpecification.cs" />
+    <Compile Include="Classes\HandFactory\HandSpecifications\PairSpecification.cs" />
     <Compile Include="Classes\HandFactory\HandSpecifications\StraightFlushSpecification.cs" />
     <Compile Include="Classes\HandFactory\HandSpecifications\StraightSpecification.cs" />
     <Compile Include="Classes\HandFactory\HandSpecifications\ThreeOfAKindSpecification.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="Classes\Hands\Flush.cs" />
     <Compile Include="Classes\Hands\FourOfAKind.cs" />
     <Compile Include="Classes\Hands\FullHouse.cs" />
+    <Compile Include="Classes\Hands\Pair.cs" />
     <Compile Include="Classes\Hands\Straight.cs" />
     <Compile Include="Classes\Hands\StraightFlush.cs" />
     <Compile Include="Classes\Hands\ThreeOfAKind.cs" />

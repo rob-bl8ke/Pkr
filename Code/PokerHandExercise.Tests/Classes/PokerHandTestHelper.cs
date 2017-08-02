@@ -166,7 +166,17 @@ namespace PokerHandExercise.Tests.Classes
               new Tuple<CardSuit, CardValue>(CardSuit.Spade, fifthCardValue),
               new Tuple<CardSuit, CardValue>(CardSuit.Heart, CardValue.Seven),
               new Tuple<CardSuit, CardValue>(CardSuit.Diamond, CardValue.Five)
-);
+            );
+        }
+
+        public static PokerHand CreatePairDifferentThirdCardValue(CardValue thirdCard, CardValue fourthCard, CardValue fifthCard)
+        {
+            return CreateHand(new Tuple<CardSuit, CardValue>(CardSuit.Heart, CardValue.Five),
+              new Tuple<CardSuit, CardValue>(CardSuit.Club, CardValue.Five),
+              new Tuple<CardSuit, CardValue>(CardSuit.Spade, thirdCard),
+              new Tuple<CardSuit, CardValue>(CardSuit.Heart, fourthCard),
+              new Tuple<CardSuit, CardValue>(CardSuit.Diamond, fifthCard)
+            );
         }
 
         public static PokerHand CreateHighTwoPairs()
