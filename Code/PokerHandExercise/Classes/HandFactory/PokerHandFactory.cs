@@ -24,6 +24,10 @@ namespace PokerHandExercise.Classes.HandFactory
             if (fullHouseSpecification.IsSatisfiedBy(pokerHand))
                 return new FullHouse(pokerHand);
 
+            FlushSpecification flushSpecification = new FlushSpecification();
+            if (flushSpecification.IsSatisfiedBy(pokerHand))
+                return new Flush(pokerHand);
+
             return null;
         }
     }

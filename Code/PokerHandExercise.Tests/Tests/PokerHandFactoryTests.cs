@@ -19,6 +19,18 @@ namespace PokerHandExercise.Tests.Tests
     public class PokerHandFactoryTests
     {
         [TestMethod]
+        public void Factory_WhenPassed_A_LowFlush_Combination_Returns_A_Flush()
+        {
+            Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateLowFlush()) is Flush);
+        }
+
+        [TestMethod]
+        public void Factory_WhenPassed_A_HighFlush_Combination_Returns_A_Flush()
+        {
+            Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateHighFlush()) is Flush);
+        }
+
+        [TestMethod]
         public void Factory_WhenPassed_A_LowFullHouse_Combination_Returns_A_FullHouse()
         {
             Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateLowFullHouse()) is FullHouse);

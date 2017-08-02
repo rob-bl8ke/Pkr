@@ -79,13 +79,53 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
-        public void Comparer_WhenComparingLowFullHouse_ToHighFullHOuse_EnsuresLow_Loses()
+        public void Comparer_WhenComparingLowFullHouse_ToHighFullHouse_EnsuresLow_Loses()
         {
             var pokerHand1 = PokerHandTestHelper.CreateLowFullHouse();
             var pokerHand2 = PokerHandTestHelper.CreateHighFullHouse();
 
             var result = _comparer.CompareHands(pokerHand1, pokerHand2);
             Assert.AreEqual(-1, result, "Expected Hand1 to lose to Hand2");
+        }
+
+        [TestMethod]
+        public void Comparer_WhenComparingHighFullHouse_ToHighFullHouse_Ensures_A_Tie()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateHighFullHouse();
+            var pokerHand2 = PokerHandTestHelper.CreateHighFullHouse();
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(0, result, "Expected Hand1 and Hand2 be equivalent");
+        }
+
+        [TestMethod]
+        public void Comparer_WhenComparingHighFlush_ToLowFlush_Ensures_High_Wins()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateHighFlush();
+            var pokerHand2 = PokerHandTestHelper.CreateLowFlush();
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(1, result, "Expected Hand1 to beat Hand2");
+        }
+
+        [TestMethod]
+        public void Comparer_WhenComparingLowFlush_ToHighFlush_EnsuresLow_Loses()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateLowFlush();
+            var pokerHand2 = PokerHandTestHelper.CreateHighFlush();
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(-1, result, "Expected Hand1 to lose to Hand2");
+        }
+
+        [TestMethod]
+        public void Comparer_WhenComparing_LowFlush_ToLowFlush_Ensures_A_Tie()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateLowFlush();
+            var pokerHand2 = PokerHandTestHelper.CreateLowFlush();
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(0, result, "Expected Hand1 and Hand2 be equivalent");
         }
     }
 }
