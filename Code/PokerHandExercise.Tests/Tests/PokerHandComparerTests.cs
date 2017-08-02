@@ -157,5 +157,37 @@ namespace PokerHandExercise.Tests.Tests
             var result = _comparer.CompareHands(pokerHand1, pokerHand2);
             Assert.AreEqual(0, result, "Expected Hand1 and Hand2 be equivalent");
         }
+
+
+
+        [TestMethod]
+        public void Comparer_WhenComparingHighThreeOfAKind_ToLowThreeOfAKind_Ensures_High_Wins()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateHighThreeOfAKind();
+            var pokerHand2 = PokerHandTestHelper.CreateLowThreeOfAKind();
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(1, result, "Expected Hand1 to beat Hand2");
+        }
+
+        [TestMethod]
+        public void Comparer_WhenComparingLowThreeOfAKind_ToHighThreeOfAKind_EnsuresLow_Loses()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateLowThreeOfAKind();
+            var pokerHand2 = PokerHandTestHelper.CreateHighThreeOfAKind();
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(-1, result, "Expected Hand1 to lose to Hand2");
+        }
+
+        [TestMethod]
+        public void Comparer_WhenComparing_LowThreeOfAKind_ToLowThreeOfAKind_Ensures_A_Tie()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateLowThreeOfAKind();
+            var pokerHand2 = PokerHandTestHelper.CreateLowThreeOfAKind();
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(0, result, "Expected Hand1 and Hand2 be equivalent");
+        }
     }
 }

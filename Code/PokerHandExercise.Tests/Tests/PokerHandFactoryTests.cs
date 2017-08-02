@@ -19,6 +19,18 @@ namespace PokerHandExercise.Tests.Tests
     public class PokerHandFactoryTests
     {
         [TestMethod]
+        public void Factory_WhenPassed_A_LowThreeOfAKind_Combination_Returns_A_ThreeOfAKind()
+        {
+            Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateLowThreeOfAKind()) is ThreeOfAKind);
+        }
+
+        [TestMethod]
+        public void Factory_WhenPassed_A_HighThreeOfAKind_Combination_Returns_A_ThreeOfAKind()
+        {
+            Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateHighThreeOfAKind()) is ThreeOfAKind);
+        }
+
+        [TestMethod]
         public void Factory_WhenPassed_A_LowStraight_Combination_Returns_A_Straight()
         {
             Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateLowStraight()) is Straight);

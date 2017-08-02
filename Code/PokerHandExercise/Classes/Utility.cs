@@ -8,6 +8,12 @@ namespace PokerHandExercise.Classes
 {
     internal static class Utility
     {
+        public static bool ContainsXofSameKind(PokerHand pokerHand, int num)
+        {
+            var groups = pokerHand.GroupBy(c => c.Value);
+            return groups.Any(g => g.Count() == num);
+        }
+
         public static bool SameSuite(PokerHand pokerHand)
         {
             return pokerHand.Select(c => c.Suit).Distinct().Count() == 1;

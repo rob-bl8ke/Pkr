@@ -32,6 +32,10 @@ namespace PokerHandExercise.Classes.HandFactory
             if (straightSpecification.IsSatisfiedBy(pokerHand))
                 return new Straight(pokerHand);
 
+            ThreeOfAKindSpecification threeOfAKindSpecification = new ThreeOfAKindSpecification();
+            if (threeOfAKindSpecification.IsSatisfiedBy(pokerHand))
+                return new ThreeOfAKind(pokerHand);
+
             return null;
         }
     }
