@@ -399,6 +399,29 @@ namespace PokerHandExercise.Tests.Tests
             Assert.AreEqual(1, result, "Expected Hand1 to beat Hand2");
         }
 
+        [TestMethod]
+        public void Comparer_WhenComparingAceTwoPair_ToKingTwoPair_AceTwoPair_Wins()
+        {
+            var pokerHand1 = new PokerHand()
+            {
+                new Card { Suit = CardSuit.Club, Value = CardValue.Ace },
+                new Card { Suit = CardSuit.Diamond, Value = CardValue.Ace },
+                new Card { Suit = CardSuit.Club, Value = CardValue.Jack },
+                new Card { Suit = CardSuit.Heart, Value = CardValue.Jack },
+                new Card { Suit = CardSuit.Club, Value = CardValue.Ten }
+            };
 
+            var pokerHand2 = new PokerHand()
+            {
+                new Card { Suit = CardSuit.Club, Value = CardValue.King },
+                new Card { Suit = CardSuit.Diamond, Value = CardValue.King },
+                new Card { Suit = CardSuit.Club, Value = CardValue.Jack },
+                new Card { Suit = CardSuit.Heart, Value = CardValue.Jack },
+                new Card { Suit = CardSuit.Club, Value = CardValue.Ten }
+            };
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(1, result, "Expected Hand1 to beat Hand2");
+        }
     }
 }

@@ -20,6 +20,7 @@ namespace PokerHandExercise.Classes
 
         public int CompareTo(Card other)
         {
+            // Note: CompareTo != Equals() in this case. Equals is always more specific.
             int thisVal = (int)this.Value;
             int otherVal = (int)other.Value;
 
