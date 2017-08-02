@@ -14890,9 +14890,9 @@ the user, we can rename this base class to UserPokerHand
 <XPD:OBJ name="OwnedViews[15]" type="UMLClassView" guid="qchpY+2Cc0SKmTXhyeYW1QAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
 <XPD:ATTR name="Left" type="integer">404</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">628</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">604</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">123</XPD:ATTR>
-<XPD:ATTR name="Height" type="integer">56</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">69</XPD:ATTR>
 <XPD:REF name="Model">r93o91FuyEmlj2g1IcVzdQAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="UVeGNiOCt029NMLt9nNztQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="vFVG+DfNsEy0D/fm7rfYsQAA">
@@ -14900,7 +14900,7 @@ the user, we can rename this base class to UserPokerHand
 <XPD:ATTR name="Text" type="string">SpecifiedPokerHand</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="Ynckeeo2VUm0p8DCyv7uBQAA">
-<XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">&lt;&lt;abstract&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="gVH8zOXy1kO/+7Cf6URVoQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -14920,7 +14920,7 @@ the user, we can rename this base class to UserPokerHand
 <XPD:OBJ name="OwnedViews[16]" type="UMLAssociationView" guid="qpXu+H2ac0OscvZqHF0BIAAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
 <XPD:ATTR name="LineStyle" type="LineStyleKind">lsRectilinear</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">452,525;452,628</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">452,525;452,604</XPD:ATTR>
 <XPD:REF name="Model">ZynyTQOh2UesGiNZFn8DBgAA</XPD:REF>
 <XPD:REF name="Head">qchpY+2Cc0SKmTXhyeYW1QAA</XPD:REF>
 <XPD:REF name="Tail">qABbtTKVMUKu+xzKw1rOtwAA</XPD:REF>
@@ -15116,7 +15116,7 @@ the user, we can rename this base class to UserPokerHand
 </XPD:OBJ>
 <XPD:OBJ name="OwnedViews[19]" type="UMLDependencyView" guid="ma4ywdoU70azZs2xAQ8a1wAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">404,672;309,690</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">404,661;309,689</XPD:ATTR>
 <XPD:REF name="Model">u2CqSLzT0US7UphRrOp6qQAA</XPD:REF>
 <XPD:REF name="Head">RojJHxOMJEmX2mvLMZRxQQAA</XPD:REF>
 <XPD:REF name="Tail">qchpY+2Cc0SKmTXhyeYW1QAA</XPD:REF>
@@ -15354,7 +15354,7 @@ the user, we can rename this base class to UserPokerHand
 </XPD:OBJ>
 <XPD:OBJ name="OwnedViews[25]" type="UMLAssociationView" guid="63LLSosyDECDRx9gcDWpmQAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">632,539;504,628</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">626,539;520,604</XPD:ATTR>
 <XPD:REF name="Model">uE209EKyRU+Qv40xptK+TgAA</XPD:REF>
 <XPD:REF name="Head">qchpY+2Cc0SKmTXhyeYW1QAA</XPD:REF>
 <XPD:REF name="Tail">t9Hw/aPTgUO9PmYexbYsgAAA</XPD:REF>
@@ -15853,6 +15853,7 @@ that it be present.
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[31]" type="UMLClass" guid="r93o91FuyEmlj2g1IcVzdQAA">
 <XPD:ATTR name="Name" type="string">SpecifiedPokerHand</XPD:ATTR>
+<XPD:ATTR name="StereotypeName" type="string">abstract</XPD:ATTR>
 <XPD:REF name="Namespace">O/+Ow/y+c0WB2YStx00PrgAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">qchpY+2Cc0SKmTXhyeYW1QAA</XPD:REF>
@@ -16089,8 +16090,8 @@ that it be present.
 <XPD:REF name="Participant">6oA3JZd6MEWPTK8g2kL5xQAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">ByftqgOrgUC6eRUeZT7mbAAA</XPD:REF>
-<XPD:REF name="Views[1]">IMVXVj1ts06a1blMjUk8vwAA</XPD:REF>
-<XPD:REF name="Views[2]">rYldCGTbwUuxJUuvEzKQ6QAA</XPD:REF>
+<XPD:REF name="Views[1]">rYldCGTbwUuxJUuvEzKQ6QAA</XPD:REF>
+<XPD:REF name="Views[2]">IMVXVj1ts06a1blMjUk8vwAA</XPD:REF>
 <XPD:REF name="Views[3]">4yqJah/mAEKFrrER4LqLeAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Connections[1]" type="UMLAssociationEnd" guid="ZgZdowTSLUuSEeH/jfO4LgAA">
@@ -16098,8 +16099,8 @@ that it be present.
 <XPD:REF name="Participant">xOIpjB8fW0u5K0pLdbI6YQAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">VpTSzT+4VkS+ZJ/BtoleWwAA</XPD:REF>
-<XPD:REF name="Views[1]">E7+rKQmBBki5kRwiERkHogAA</XPD:REF>
-<XPD:REF name="Views[2]">cIgY7+/H4UuipkRPSLI7nAAA</XPD:REF>
+<XPD:REF name="Views[1]">cIgY7+/H4UuipkRPSLI7nAAA</XPD:REF>
+<XPD:REF name="Views[2]">E7+rKQmBBki5kRwiERkHogAA</XPD:REF>
 <XPD:REF name="Views[3]">L5J7eC6YQk6ZNcZBccTRGgAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
@@ -16116,8 +16117,8 @@ that it be present.
 <XPD:REF name="Participant">9WWvd5IhtECVhfvePrzONgAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">xvxwSuwdjk6XmENKltd3tQAA</XPD:REF>
-<XPD:REF name="Views[1]">ZsLbuHM4jUqD6/aAYUt7dAAA</XPD:REF>
-<XPD:REF name="Views[2]">LL8Ir3Kyx0aepwBIay48NQAA</XPD:REF>
+<XPD:REF name="Views[1]">LL8Ir3Kyx0aepwBIay48NQAA</XPD:REF>
+<XPD:REF name="Views[2]">ZsLbuHM4jUqD6/aAYUt7dAAA</XPD:REF>
 <XPD:REF name="Views[3]">9CDoOEQCiUeqJEbu4q1r4wAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Connections[1]" type="UMLAssociationEnd" guid="jnGxdaRAwkWxZEdew9iiggAA">
@@ -16126,8 +16127,8 @@ that it be present.
 <XPD:REF name="Participant">xOIpjB8fW0u5K0pLdbI6YQAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">FU6YujjrMUGJ3iANYokWGwAA</XPD:REF>
-<XPD:REF name="Views[1]">o/5mDdUfLECfNrURaBGUYQAA</XPD:REF>
-<XPD:REF name="Views[2]">hKGt3oUbZU67wYVYWck2QwAA</XPD:REF>
+<XPD:REF name="Views[1]">hKGt3oUbZU67wYVYWck2QwAA</XPD:REF>
+<XPD:REF name="Views[2]">o/5mDdUfLECfNrURaBGUYQAA</XPD:REF>
 <XPD:REF name="Views[3]">EqoPKO8Q+U6hIXDGMu7hSgAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
@@ -16145,8 +16146,8 @@ that it be present.
 <XPD:REF name="Participant">xOIpjB8fW0u5K0pLdbI6YQAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">EmxPODYg606WrUXOYA28XwAA</XPD:REF>
-<XPD:REF name="Views[1]">SswPooUwe06hHY9XNWPfngAA</XPD:REF>
-<XPD:REF name="Views[2]">ldaqdCbgqkqQJrYOrD8bsgAA</XPD:REF>
+<XPD:REF name="Views[1]">ldaqdCbgqkqQJrYOrD8bsgAA</XPD:REF>
+<XPD:REF name="Views[2]">SswPooUwe06hHY9XNWPfngAA</XPD:REF>
 <XPD:REF name="Views[3]">6Cw09vVVyUa41Y/+Ng7cSwAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Connections[1]" type="UMLAssociationEnd" guid="5rIW7Kuzdk+4I7W119J+ygAA">
@@ -16154,8 +16155,8 @@ that it be present.
 <XPD:REF name="Participant">r93o91FuyEmlj2g1IcVzdQAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">k/1PyBijV0SnGK/GTsUwGAAA</XPD:REF>
-<XPD:REF name="Views[1]">ws96Y+0NYUuUQwEPuxpcjwAA</XPD:REF>
-<XPD:REF name="Views[2]">6A2DyAEja0OOl7M9bWop+AAA</XPD:REF>
+<XPD:REF name="Views[1]">6A2DyAEja0OOl7M9bWop+AAA</XPD:REF>
+<XPD:REF name="Views[2]">ws96Y+0NYUuUQwEPuxpcjwAA</XPD:REF>
 <XPD:REF name="Views[3]">bmWfHTKx602ZjiZRAjgEXQAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>

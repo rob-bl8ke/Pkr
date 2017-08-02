@@ -12,9 +12,9 @@ namespace PokerHandExercise.Classes.HandFactory
     {
         internal SpecifiedPokerHand Create(PokerHand pokerHand)
         {
-            StraightFlushSpecification straightFlushSpecifiation = new StraightFlushSpecification();
-            if (straightFlushSpecifiation.IsSatisfiedBy(pokerHand))
-                return new StraightFlush();
+            StraightFlushSpecification straightFlushSpecification = new StraightFlushSpecification();
+            if (straightFlushSpecification.IsSatisfiedBy(pokerHand))
+                return new StraightFlush(pokerHand);
 
             return null;
         }
