@@ -158,8 +158,6 @@ namespace PokerHandExercise.Tests.Tests
             Assert.AreEqual(0, result, "Expected Hand1 and Hand2 be equivalent");
         }
 
-
-
         [TestMethod]
         public void Comparer_WhenComparingHighThreeOfAKind_ToLowThreeOfAKind_Ensures_High_Wins()
         {
@@ -188,6 +186,58 @@ namespace PokerHandExercise.Tests.Tests
 
             var result = _comparer.CompareHands(pokerHand1, pokerHand2);
             Assert.AreEqual(0, result, "Expected Hand1 and Hand2 be equivalent");
+        }
+
+
+
+        [TestMethod]
+        public void Comparer_WhenComparingHighTwoPair_ToLowTwoPair_Ensures_High_Wins()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateHighTwoPairs();
+            var pokerHand2 = PokerHandTestHelper.CreateLowTwoPairs();
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(1, result, "Expected Hand1 to beat Hand2");
+        }
+
+        [TestMethod]
+        public void Comparer_WhenComparingLowTwoPair_ToHighTwoPair_EnsuresLow_Loses()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateLowTwoPairs();
+            var pokerHand2 = PokerHandTestHelper.CreateHighTwoPairs();
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(-1, result, "Expected Hand1 to lose to Hand2");
+        }
+
+        [TestMethod]
+        public void Comparer_WhenComparing_LowTwoPair_ToLowTwoPair_Ensures_A_Tie()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateLowTwoPairs();
+            var pokerHand2 = PokerHandTestHelper.CreateLowTwoPairs();
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(0, result, "Expected Hand1 and Hand2 be equivalent");
+        }
+
+        [TestMethod]
+        public void Comparer_WhenComparing_MidTwoPair_ToMidTwoPair_Ensures_A_Tie()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateMidTwoPairs();
+            var pokerHand2 = PokerHandTestHelper.CreateMidTwoPairs();
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(0, result, "Expected Hand1 and Hand2 be equivalent");
+        }
+
+        [TestMethod]
+        public void Comparer_WhenComparing_TwoPairWithHighFifth_ToTwoPairWithLowFifth_EnsuresHigh_Wins()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateSameTwoPairsDifferentFifthCard(CardValue.Ace);
+            var pokerHand2 = PokerHandTestHelper.CreateSameTwoPairsDifferentFifthCard(CardValue.Eight);
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(1, result, "Expected Hand1 to beat Hand2");
         }
     }
 }

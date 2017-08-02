@@ -49,6 +49,7 @@
     <Compile Include="Classes\HandFactory\HandSpecifications\StraightFlushSpecification.cs" />
     <Compile Include="Classes\HandFactory\HandSpecifications\StraightSpecification.cs" />
     <Compile Include="Classes\HandFactory\HandSpecifications\ThreeOfAKindSpecification.cs" />
+    <Compile Include="Classes\HandFactory\HandSpecifications\TwoPairSpecification.cs" />
     <Compile Include="Classes\HandFactory\PokerHandFactory.cs" />
     <Compile Include="Classes\Hands\Flush.cs" />
     <Compile Include="Classes\Hands\FourOfAKind.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="Classes\Hands\Straight.cs" />
     <Compile Include="Classes\Hands\StraightFlush.cs" />
     <Compile Include="Classes\Hands\ThreeOfAKind.cs" />
+    <Compile Include="Classes\Hands\TwoPair.cs" />
     <Compile Include="Classes\IPokerHandComparer.cs" />
     <Compile Include="Classes\PokerHand.cs" />
     <Compile Include="Classes\PokerHandComparer.cs" />

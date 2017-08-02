@@ -36,6 +36,10 @@ namespace PokerHandExercise.Classes.HandFactory
             if (threeOfAKindSpecification.IsSatisfiedBy(pokerHand))
                 return new ThreeOfAKind(pokerHand);
 
+            TwoPairSpecification twoPairSpecification = new TwoPairSpecification();
+            if (twoPairSpecification.IsSatisfiedBy(pokerHand))
+                return new TwoPair(pokerHand);
+
             return null;
         }
     }
