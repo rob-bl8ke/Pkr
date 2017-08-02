@@ -6,20 +6,26 @@ using System.Threading.Tasks;
 
 namespace PokerHandExercise.Classes.Hands
 {
-    internal class Flush : SpecifiedPokerHand
+    internal class HighCard : SpecifiedPokerHand
     {
-        public Flush(PokerHand pokerHand) : base(pokerHand)
+        public HighCard(PokerHand pokerHand) : base(pokerHand)
         {
-            base.Weighting = 6;
+            base.Weighting = 1;
         }
 
         public override int CompareTo(SpecifiedPokerHand other)
         {
-            if (other is Flush)
+            if (other is HighCard)
             {
-                for (int x = this.pokerHand.Count - 1; x >=0; x--)
+                for (int x = 0; x < this.pokerHand.Count; x++)
                 {
+                    if (this[x].Value == CardValue.Ace && other[x].Value != CardValue.Ace)
+                        return 1;
+                    else if (other[x].Value == CardValue.Ace && this[x].Value != CardValue.Ace)
+                        return -1;
+
                     int val = this[x].CompareTo(other[x]);
+
                     if (val != 0)
                         return val;
                 }

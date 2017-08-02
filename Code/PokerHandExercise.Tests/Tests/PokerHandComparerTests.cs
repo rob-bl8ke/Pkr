@@ -297,5 +297,108 @@ namespace PokerHandExercise.Tests.Tests
             var result = _comparer.CompareHands(pokerHand1, pokerHand2);
             Assert.AreEqual(1, result, "Expected Hand1 to beat Hand2");
         }
+
+        [TestMethod]
+        public void Comparer_WhenComparing_1stHigh_HighCard_ToLowerHighCard_Ensures_High_Wins()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateHighHighCard();
+            var pokerHand2 = PokerHandTestHelper.CreateLowHighCard();
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(1, result, "Expected Hand1 to beat Hand2");
+        }
+
+        [TestMethod]
+        public void Comparer_WhenComparing_StraightFlush_To_FourOfAKind_StraightFlush_Wins()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateAceLowStraightFlush();
+            var pokerHand2 = PokerHandTestHelper.CreateHighFourOfAKind();
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(1, result, "Expected Hand1 to beat Hand2");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        [TestMethod]
+        public void Comparer_WhenComparing_FourOfAKind_To_FullHouse_FourOfAKind_Wins()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateLowFourOfAKind();
+            var pokerHand2 = PokerHandTestHelper.CreateHighFullHouse();
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(1, result, "Expected Hand1 to beat Hand2");
+        }
+
+        [TestMethod]
+        public void Comparer_WhenComparing_FullHouse_To_Flush_FullHouse_Wins()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateLowFullHouse();
+            var pokerHand2 = PokerHandTestHelper.CreateHighFlush();
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(1, result, "Expected Hand1 to beat Hand2");
+        }
+
+        [TestMethod]
+        public void Comparer_WhenComparing_Flush_To_Straight_Flush_Wins()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateLowFlush();
+            var pokerHand2 = PokerHandTestHelper.CreateHighStraight();
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(1, result, "Expected Hand1 to beat Hand2");
+        }
+
+        [TestMethod]
+        public void Comparer_WhenComparing_Straight_To_ThreeOfAKind_Straight_Wins()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateLowStraight();
+            var pokerHand2 = PokerHandTestHelper.CreateHighThreeOfAKind();
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(1, result, "Expected Hand1 to beat Hand2");
+        }
+
+        [TestMethod]
+        public void Comparer_WhenComparing_ThreeOfAKind_To_TwoPair_ThreeOfAKind_Wins()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateLowThreeOfAKind();
+            var pokerHand2 = PokerHandTestHelper.CreateHighTwoPairs();
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(1, result, "Expected Hand1 to beat Hand2");
+        }
+
+        [TestMethod]
+        public void Comparer_WhenComparing_TwoPair_To_Pair_TwoPair_Wins()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateLowTwoPairs();
+            var pokerHand2 = PokerHandTestHelper.CreateHighPair();
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(1, result, "Expected Hand1 to beat Hand2");
+        }
+
+        [TestMethod]
+        public void Comparer_WhenComparing_Pair_To_HighCard_Pair_Wins()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateLowPair();
+            var pokerHand2 = PokerHandTestHelper.CreateHighHighCard();
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(1, result, "Expected Hand1 to beat Hand2");
+        }
+
+
     }
 }

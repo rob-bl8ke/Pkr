@@ -19,6 +19,7 @@ namespace PokerHandExercise.Classes.Hands
 
         public ThreeOfAKind(PokerHand pokerHand) : base(pokerHand)
         {
+            base.Weighting = 4;
         }
 
 
@@ -41,12 +42,7 @@ namespace PokerHandExercise.Classes.Hands
             }
             else
             {
-                if (this.Weighting > other.Weighting)
-                    return 1;
-                else if (this.Weighting < other.Weighting)
-                    return -1;
-                else
-                    return 0;
+                return base.CompareTo(other);
             }
         }
     }

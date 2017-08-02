@@ -44,7 +44,11 @@ namespace PokerHandExercise.Classes.HandFactory
             if (pairSpecification.IsSatisfiedBy(pokerHand))
                 return new Pair(pokerHand);
 
-            return null;
+            //HighCardSpecification highCardSpecification = new HighCardSpecification();
+            //if (highCardSpecification.IsSatisfiedBy(pokerHand))
+            //    return new HighCard(pokerHand);
+
+            return new HighCard(pokerHand);
         }
     }
 }

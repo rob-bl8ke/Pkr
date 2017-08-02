@@ -19,6 +19,7 @@ namespace PokerHandExercise.Classes.Hands
 
         public Pair(PokerHand pokerHand) : base(pokerHand)
         {
+            base.Weighting = 2;
         }
 
         public override int CompareTo(SpecifiedPokerHand other)
@@ -56,12 +57,7 @@ namespace PokerHandExercise.Classes.Hands
             }
             else
             {
-                if (this.Weighting > other.Weighting)
-                    return 1;
-                else if (this.Weighting < other.Weighting)
-                    return -1;
-                else
-                    return 0;
+                return base.CompareTo(other);
             }
         }
     }

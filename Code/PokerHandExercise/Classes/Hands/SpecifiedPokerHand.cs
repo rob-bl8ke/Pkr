@@ -8,7 +8,7 @@ namespace PokerHandExercise.Classes.Hands
 {
     internal abstract class SpecifiedPokerHand : IComparable<SpecifiedPokerHand>
     {
-        internal readonly int Weighting;
+        public int Weighting { get; protected set; }
         protected readonly PokerHand pokerHand;
 
         public Card this[int x]
@@ -23,6 +23,14 @@ namespace PokerHandExercise.Classes.Hands
             this.pokerHand = pokerHand;
         }
 
-        public abstract int CompareTo(SpecifiedPokerHand other);
+        public virtual int CompareTo(SpecifiedPokerHand other)
+        {
+            if (this.Weighting > other.Weighting)
+                return 1;
+            else if (this.Weighting < other.Weighting)
+                return -1;
+            else
+                return 0;
+        }
     }
 }
