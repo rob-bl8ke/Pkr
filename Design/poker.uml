@@ -14279,11 +14279,19 @@ the user, we can rename this base class to UserPokerHand
 <XPD:REF name="DiagramOwner">O/+Ow/y+c0WB2YStx00PrgAA</XPD:REF>
 <XPD:OBJ name="DiagramView" type="UMLClassDiagramView" guid="b6VCS7bxk0G320bGB0KrZwAA">
 <XPD:REF name="Diagram">HR6N5LYjpkyA3MkDAlGoiAAA</XPD:REF>
-<XPD:ATTR name="#OwnedViews" type="integer">26</XPD:ATTR>
-<XPD:OBJ name="OwnedViews[0]" type="UMLInterfaceView" guid="DefcjXXtXk678WtN+BeMuAAA">
+<XPD:ATTR name="#OwnedViews" type="integer">29</XPD:ATTR>
+<XPD:OBJ name="OwnedViews[0]" type="RectangleView" guid="SprQEy4HQUCmSttYFbzPxwAA">
+<XPD:ATTR name="Left" type="integer">108</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">200</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">1092</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">564</XPD:ATTR>
+<XPD:ATTR name="LineWidth" type="integer">1</XPD:ATTR>
+<XPD:ATTR name="LineKind" type="LineKind">lkSolid</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[1]" type="UMLInterfaceView" guid="DefcjXXtXk678WtN+BeMuAAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">588</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">76</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">464</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">180</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">284</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">71</XPD:ATTR>
 <XPD:ATTR name="StereotypeDisplay" type="UMLStereotypeDisplayKind">sdkDecoration</XPD:ATTR>
@@ -14307,12 +14315,12 @@ the user, we can rename this base class to UserPokerHand
 <XPD:REF name="Model">sbBGvpUfKkCBOELdVjCUBgAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[1]" type="UMLClassView" guid="adTGryhy5ESLtRgFu5040QAA">
+<XPD:OBJ name="OwnedViews[2]" type="UMLClassView" guid="adTGryhy5ESLtRgFu5040QAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">196</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">52</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">128</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">184</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">284</XPD:ATTR>
-<XPD:ATTR name="Height" type="integer">56</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">69</XPD:ATTR>
 <XPD:REF name="Model">8Jdal9EM4UCtAq30ua8hrgAA</XPD:REF>
 <XPD:OBJ name="NameCompartment" type="UMLNameCompartmentView" guid="JW88WrG9f0SOW6+uo8emnQAA">
 <XPD:OBJ name="NameLabel" type="LabelView" guid="5x53X03M50iP9tT2BVjNfgAA">
@@ -14320,7 +14328,7 @@ the user, we can rename this base class to UserPokerHand
 <XPD:ATTR name="Text" type="string">PokerHandComparer</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="StereotypeLabel" type="LabelView" guid="KEHVtyyXYkeu68C+BmyrMQAA">
-<XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">&lt;&lt;Aggregate Root&gt;&gt;</XPD:ATTR>
 </XPD:OBJ>
 <XPD:OBJ name="PropertyLabel" type="LabelView" guid="Pb7Rwc9/OUur5v9c9Cn6EQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
@@ -14337,9 +14345,10 @@ the user, we can rename this base class to UserPokerHand
 <XPD:REF name="Model">8Jdal9EM4UCtAq30ua8hrgAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[2]" type="UMLRealizationView" guid="b4mu8fmZpUOAeMvCvTuaCQAA">
+<XPD:OBJ name="OwnedViews[3]" type="UMLRealizationView" guid="b4mu8fmZpUOAeMvCvTuaCQAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">479,91;588,100</XPD:ATTR>
+<XPD:ATTR name="LineStyle" type="LineStyleKind">lsRectilinear</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">411,217;464,217</XPD:ATTR>
 <XPD:REF name="Model">pPmcpASBZECvPEhcmi/K5gAA</XPD:REF>
 <XPD:REF name="Head">DefcjXXtXk678WtN+BeMuAAA</XPD:REF>
 <XPD:REF name="Tail">adTGryhy5ESLtRgFu5040QAA</XPD:REF>
@@ -14362,10 +14371,10 @@ the user, we can rename this base class to UserPokerHand
 <XPD:REF name="Model">pPmcpASBZECvPEhcmi/K5gAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[3]" type="UMLClassView" guid="fZ5FTCORu0+gaEeseKvFaQAA">
+<XPD:OBJ name="OwnedViews[4]" type="UMLClassView" guid="fZ5FTCORu0+gaEeseKvFaQAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">976</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">48</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">912</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">208</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">115</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">56</XPD:ATTR>
 <XPD:REF name="Model">+LKv8ubzoEuLG41XkG76zgAA</XPD:REF>
@@ -14392,10 +14401,10 @@ the user, we can rename this base class to UserPokerHand
 <XPD:REF name="Model">+LKv8ubzoEuLG41XkG76zgAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[4]" type="UMLClassView" guid="JbZhtIlHdUKKTiGWTOoj1gAA">
+<XPD:OBJ name="OwnedViews[5]" type="UMLClassView" guid="JbZhtIlHdUKKTiGWTOoj1gAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">924</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">324</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">860</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">484</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">159</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">56</XPD:ATTR>
 <XPD:REF name="Model">9WWvd5IhtECVhfvePrzONgAA</XPD:REF>
@@ -14422,10 +14431,10 @@ the user, we can rename this base class to UserPokerHand
 <XPD:REF name="Model">9WWvd5IhtECVhfvePrzONgAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[5]" type="UMLClassView" guid="iJu1z03ruUytGTQ+dGrKCQAA">
+<XPD:OBJ name="OwnedViews[6]" type="UMLClassView" guid="iJu1z03ruUytGTQ+dGrKCQAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">991</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">188</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">927</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">348</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">80</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">82</XPD:ATTR>
 <XPD:REF name="Model">qaiez0T7wkaunsIkCSGqdQAA</XPD:REF>
@@ -14452,9 +14461,9 @@ the user, we can rename this base class to UserPokerHand
 <XPD:REF name="Model">qaiez0T7wkaunsIkCSGqdQAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[6]" type="UMLAssociationView" guid="BFuzjckPN06ZUE6HkV7MkAAA">
+<XPD:OBJ name="OwnedViews[7]" type="UMLAssociationView" guid="BFuzjckPN06ZUE6HkV7MkAAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">1032,103;1031,188</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">968,263;967,348</XPD:ATTR>
 <XPD:REF name="Model">j7VXXpnBcECn3FT+5mYHRQAA</XPD:REF>
 <XPD:REF name="Head">iJu1z03ruUytGTQ+dGrKCQAA</XPD:REF>
 <XPD:REF name="Tail">fZ5FTCORu0+gaEeseKvFaQAA</XPD:REF>
@@ -14520,25 +14529,25 @@ the user, we can rename this base class to UserPokerHand
 </XPD:OBJ>
 <XPD:OBJ name="HeadQualifierCompartment" type="UMLQualifierCompartmentView" guid="r1vvbb7tDkO9j+1I9UXd2AAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">-72</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">-980</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">-136</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">-820</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">50</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">8</XPD:ATTR>
 <XPD:REF name="Model">GNHNj9C4QU2+tTnb8wCZsAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="TailQualifierCompartment" type="UMLQualifierCompartmentView" guid="OfPSa++xqU2vFFcv8BOlhQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">-72</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">-980</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">-136</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">-820</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">50</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">8</XPD:ATTR>
 <XPD:REF name="Model">A9ZSfpG4CUqdNPfvAZV/ygAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[7]" type="UMLEnumerationView" guid="oeQTfMLmtkKNrRfc4llVsAAA">
+<XPD:OBJ name="OwnedViews[8]" type="UMLEnumerationView" guid="oeQTfMLmtkKNrRfc4llVsAAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">1140</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">224</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">1076</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">384</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">102</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">56</XPD:ATTR>
 <XPD:REF name="Model">GhY1TgoPLUmeCiZXJGF91wAA</XPD:REF>
@@ -14561,10 +14570,10 @@ the user, we can rename this base class to UserPokerHand
 <XPD:REF name="Model">GhY1TgoPLUmeCiZXJGF91wAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[8]" type="UMLEnumerationView" guid="pQpFZj4JcEiLEo265GD5FQAA">
+<XPD:OBJ name="OwnedViews[9]" type="UMLEnumerationView" guid="pQpFZj4JcEiLEo265GD5FQAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">1140</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">152</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">1076</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">312</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">102</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">56</XPD:ATTR>
 <XPD:REF name="Model">X2y17+YrmkSs001sS6MhZgAA</XPD:REF>
@@ -14587,9 +14596,9 @@ the user, we can rename this base class to UserPokerHand
 <XPD:REF name="Model">X2y17+YrmkSs001sS6MhZgAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[9]" type="UMLAssociationView" guid="uQBaf/GNSkGd3696vbCteQAA">
+<XPD:OBJ name="OwnedViews[10]" type="UMLAssociationView" guid="uQBaf/GNSkGd3696vbCteQAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">1140,194;1070,216</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">1076,354;1006,376</XPD:ATTR>
 <XPD:REF name="Model">z7ND8ooLikG7aPNkd92cGwAA</XPD:REF>
 <XPD:REF name="Head">iJu1z03ruUytGTQ+dGrKCQAA</XPD:REF>
 <XPD:REF name="Tail">pQpFZj4JcEiLEo265GD5FQAA</XPD:REF>
@@ -14655,24 +14664,24 @@ the user, we can rename this base class to UserPokerHand
 </XPD:OBJ>
 <XPD:OBJ name="HeadQualifierCompartment" type="UMLQualifierCompartmentView" guid="X7RR3PmJBki22uXrHcumtQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">-72</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">-980</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">-136</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">-820</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">50</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">8</XPD:ATTR>
 <XPD:REF name="Model">jtg51mNfhU6j6Lz9fzqf3AAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="TailQualifierCompartment" type="UMLQualifierCompartmentView" guid="6c9vNUD5dkiIV/nnlCTuYAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">-72</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">-980</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">-136</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">-820</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">50</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">8</XPD:ATTR>
 <XPD:REF name="Model">jN5Z4RtVK0iXPnevEBjfbwAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[10]" type="UMLAssociationView" guid="qfENa0pkFECN7LQmgf7+UwAA">
+<XPD:OBJ name="OwnedViews[11]" type="UMLAssociationView" guid="qfENa0pkFECN7LQmgf7+UwAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">1140,244;1070,234</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">1076,404;1006,394</XPD:ATTR>
 <XPD:REF name="Model">Dguq5bSPfUeVHnTGuwmA9wAA</XPD:REF>
 <XPD:REF name="Head">iJu1z03ruUytGTQ+dGrKCQAA</XPD:REF>
 <XPD:REF name="Tail">oeQTfMLmtkKNrRfc4llVsAAA</XPD:REF>
@@ -14738,25 +14747,25 @@ the user, we can rename this base class to UserPokerHand
 </XPD:OBJ>
 <XPD:OBJ name="HeadQualifierCompartment" type="UMLQualifierCompartmentView" guid="dlAYBEbWcUiazwAiQFHYhAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">-72</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">-980</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">-136</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">-820</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">50</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">8</XPD:ATTR>
 <XPD:REF name="Model">76Jiz5kkqkCRxWcYcObjYAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="TailQualifierCompartment" type="UMLQualifierCompartmentView" guid="tIWKCt3gckWHFTIaFwEIRgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">-72</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">-980</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">-136</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">-820</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">50</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">8</XPD:ATTR>
 <XPD:REF name="Model">ihHSqrCsjU23NVMnjFkOQQAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[11]" type="UMLClassView" guid="qABbtTKVMUKu+xzKw1rOtwAA">
+<XPD:OBJ name="OwnedViews[12]" type="UMLClassView" guid="qABbtTKVMUKu+xzKw1rOtwAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">472</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">336</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">408</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">496</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">80</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">30</XPD:ATTR>
 <XPD:REF name="Model">6oA3JZd6MEWPTK8g2kL5xQAA</XPD:REF>
@@ -14785,10 +14794,10 @@ the user, we can rename this base class to UserPokerHand
 <XPD:REF name="Model">6oA3JZd6MEWPTK8g2kL5xQAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[12]" type="UMLAssociationView" guid="2yTv1PnBg0+zpIKAy5Z1oAAA">
+<XPD:OBJ name="OwnedViews[13]" type="UMLAssociationView" guid="2yTv1PnBg0+zpIKAy5Z1oAAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
 <XPD:ATTR name="LineStyle" type="LineStyleKind">lsRectilinear</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">991,224;511,224;511,336</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">927,384;447,384;447,496</XPD:ATTR>
 <XPD:REF name="Model">wsAjNxmKvk6O9tbeJ3VNdwAA</XPD:REF>
 <XPD:REF name="Head">qABbtTKVMUKu+xzKw1rOtwAA</XPD:REF>
 <XPD:REF name="Tail">iJu1z03ruUytGTQ+dGrKCQAA</XPD:REF>
@@ -14854,34 +14863,34 @@ the user, we can rename this base class to UserPokerHand
 </XPD:OBJ>
 <XPD:OBJ name="HeadQualifierCompartment" type="UMLQualifierCompartmentView" guid="+77ebrL5q0ecrD9Q5AfmEwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">-712</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">-992</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">-776</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">-832</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">50</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">8</XPD:ATTR>
 <XPD:REF name="Model">df/47agl10u+mc5qHBZKdAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="TailQualifierCompartment" type="UMLQualifierCompartmentView" guid="/lQVei95ikCQeLcqEhpn/QAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">-712</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">-992</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">-776</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">-832</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">50</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">8</XPD:ATTR>
 <XPD:REF name="Model">wdEXYtboBEmcfjs266d/9QAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[13]" type="UMLTextView" guid="zvbjzQGz0Ea8m4xkIKNDJwAA">
+<XPD:OBJ name="OwnedViews[14]" type="UMLTextView" guid="zvbjzQGz0Ea8m4xkIKNDJwAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">204</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">112</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">140</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">272</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">105</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">23</XPD:ATTR>
 <XPD:ATTR name="Text" type="string">Must return -1, 0, 1
 </XPD:ATTR>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[14]" type="UMLClassView" guid="qchpY+2Cc0SKmTXhyeYW1QAA">
+<XPD:OBJ name="OwnedViews[15]" type="UMLClassView" guid="qchpY+2Cc0SKmTXhyeYW1QAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">468</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">468</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">404</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">628</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">123</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">56</XPD:ATTR>
 <XPD:REF name="Model">r93o91FuyEmlj2g1IcVzdQAA</XPD:REF>
@@ -14908,10 +14917,10 @@ the user, we can rename this base class to UserPokerHand
 <XPD:REF name="Model">r93o91FuyEmlj2g1IcVzdQAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[15]" type="UMLAssociationView" guid="qpXu+H2ac0OscvZqHF0BIAAA">
+<XPD:OBJ name="OwnedViews[16]" type="UMLAssociationView" guid="qpXu+H2ac0OscvZqHF0BIAAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
 <XPD:ATTR name="LineStyle" type="LineStyleKind">lsRectilinear</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">516,365;516,468</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">452,525;452,628</XPD:ATTR>
 <XPD:REF name="Model">ZynyTQOh2UesGiNZFn8DBgAA</XPD:REF>
 <XPD:REF name="Head">qchpY+2Cc0SKmTXhyeYW1QAA</XPD:REF>
 <XPD:REF name="Tail">qABbtTKVMUKu+xzKw1rOtwAA</XPD:REF>
@@ -14977,25 +14986,25 @@ the user, we can rename this base class to UserPokerHand
 </XPD:OBJ>
 <XPD:OBJ name="HeadQualifierCompartment" type="UMLQualifierCompartmentView" guid="FtC3uWL09EmqFztjAwd2bwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">-1000</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">-1000</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">-1064</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">-840</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">50</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">8</XPD:ATTR>
 <XPD:REF name="Model">obccGyPzqEqZfqYS6N+enAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="TailQualifierCompartment" type="UMLQualifierCompartmentView" guid="mQbcwhpOZ0WlfWKE+OTjkAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">-1000</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">-1000</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">-1064</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">-840</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">50</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">8</XPD:ATTR>
 <XPD:REF name="Model">V1QQknqojE2ZtaDZ8R8ORwAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[16]" type="UMLAssociationView" guid="0C6bts71gkGQnCb+EbJ6hAAA">
+<XPD:OBJ name="OwnedViews[17]" type="UMLAssociationView" guid="0C6bts71gkGQnCb+EbJ6hAAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
 <XPD:ATTR name="LineStyle" type="LineStyleKind">lsRectilinear</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">312,107;312,488;468,488</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">248,252;248,648;404,648</XPD:ATTR>
 <XPD:REF name="Model">UDC6edHQBE+ur/G/BGYyegAA</XPD:REF>
 <XPD:REF name="Head">qchpY+2Cc0SKmTXhyeYW1QAA</XPD:REF>
 <XPD:REF name="Tail">adTGryhy5ESLtRgFu5040QAA</XPD:REF>
@@ -15061,25 +15070,25 @@ the user, we can rename this base class to UserPokerHand
 </XPD:OBJ>
 <XPD:OBJ name="HeadQualifierCompartment" type="UMLQualifierCompartmentView" guid="9BIHEpIqEUGSXA+grzIxYgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">-1000</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">-1000</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">-1064</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">-840</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">50</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">8</XPD:ATTR>
 <XPD:REF name="Model">aLgChLnd9E2RnLPh/d9WOwAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="TailQualifierCompartment" type="UMLQualifierCompartmentView" guid="Kqx2GmnnHU6ArIVyERYb4QAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">-1000</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">-1000</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">-1064</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">-840</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">50</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">8</XPD:ATTR>
 <XPD:REF name="Model">TvOORzwmzEepSP1mg/g/fQAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[17]" type="UMLInterfaceView" guid="RojJHxOMJEmX2mvLMZRxQQAA">
+<XPD:OBJ name="OwnedViews[18]" type="UMLInterfaceView" guid="RojJHxOMJEmX2mvLMZRxQQAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">320</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">520</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">256</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">680</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">86</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">45</XPD:ATTR>
 <XPD:ATTR name="StereotypeDisplay" type="UMLStereotypeDisplayKind">sdkIcon</XPD:ATTR>
@@ -15105,9 +15114,9 @@ the user, we can rename this base class to UserPokerHand
 <XPD:REF name="Model">+AladK3w30eMpETYi3P/ZgAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[18]" type="UMLDependencyView" guid="ma4ywdoU70azZs2xAQ8a1wAA">
+<XPD:OBJ name="OwnedViews[19]" type="UMLDependencyView" guid="ma4ywdoU70azZs2xAQ8a1wAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">468,512;373,530</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">404,672;309,690</XPD:ATTR>
 <XPD:REF name="Model">u2CqSLzT0US7UphRrOp6qQAA</XPD:REF>
 <XPD:REF name="Head">RojJHxOMJEmX2mvLMZRxQQAA</XPD:REF>
 <XPD:REF name="Tail">qchpY+2Cc0SKmTXhyeYW1QAA</XPD:REF>
@@ -15130,25 +15139,25 @@ the user, we can rename this base class to UserPokerHand
 <XPD:REF name="Model">u2CqSLzT0US7UphRrOp6qQAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[19]" type="UMLNoteView" guid="BxBaLDVqBECNYADWcx3STQAA">
+<XPD:OBJ name="OwnedViews[20]" type="UMLNoteView" guid="BxBaLDVqBECNYADWcx3STQAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">388</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">292</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">324</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">452</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">75</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">30</XPD:ATTR>
 <XPD:ATTR name="Text" type="string">List&lt;Card&gt;
 </XPD:ATTR>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[20]" type="UMLNoteLinkView" guid="rn/j4R96i0+1DQHtTWdARAAA">
+<XPD:OBJ name="OwnedViews[21]" type="UMLNoteLinkView" guid="rn/j4R96i0+1DQHtTWdARAAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">484,336;455,321</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">420,496;391,481</XPD:ATTR>
 <XPD:REF name="Head">BxBaLDVqBECNYADWcx3STQAA</XPD:REF>
 <XPD:REF name="Tail">qABbtTKVMUKu+xzKw1rOtwAA</XPD:REF>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[21]" type="UMLClassView" guid="t9Hw/aPTgUO9PmYexbYsgAAA">
+<XPD:OBJ name="OwnedViews[22]" type="UMLClassView" guid="t9Hw/aPTgUO9PmYexbYsgAAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">644</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">324</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">580</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">484</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">186</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">56</XPD:ATTR>
 <XPD:REF name="Model">xOIpjB8fW0u5K0pLdbI6YQAA</XPD:REF>
@@ -15175,10 +15184,10 @@ the user, we can rename this base class to UserPokerHand
 <XPD:REF name="Model">xOIpjB8fW0u5K0pLdbI6YQAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[22]" type="UMLAssociationView" guid="iOO0gZLaZk+Yg7SXe+QhpAAA">
+<XPD:OBJ name="OwnedViews[23]" type="UMLAssociationView" guid="iOO0gZLaZk+Yg7SXe+QhpAAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
 <XPD:ATTR name="LineStyle" type="LineStyleKind">lsRectilinear</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">551,351;644,351</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">487,511;580,511</XPD:ATTR>
 <XPD:REF name="Model">K3jYb6BAdkqo9mD0cVM4YgAA</XPD:REF>
 <XPD:REF name="Head">t9Hw/aPTgUO9PmYexbYsgAAA</XPD:REF>
 <XPD:REF name="Tail">qABbtTKVMUKu+xzKw1rOtwAA</XPD:REF>
@@ -15244,25 +15253,25 @@ the user, we can rename this base class to UserPokerHand
 </XPD:OBJ>
 <XPD:OBJ name="HeadQualifierCompartment" type="UMLQualifierCompartmentView" guid="L5J7eC6YQk6ZNcZBccTRGgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">-1000</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">-1000</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">-1064</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">-840</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">50</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">8</XPD:ATTR>
 <XPD:REF name="Model">ZgZdowTSLUuSEeH/jfO4LgAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="TailQualifierCompartment" type="UMLQualifierCompartmentView" guid="4yqJah/mAEKFrrER4LqLeAAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">-1000</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">-1000</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">-1064</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">-840</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">50</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">8</XPD:ATTR>
 <XPD:REF name="Model">7FizGHmnH0S/bpjYhXsHLQAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[23]" type="UMLAssociationView" guid="b4x5LVZNRU+BxxPBQdZXYAAA">
+<XPD:OBJ name="OwnedViews[24]" type="UMLAssociationView" guid="b4x5LVZNRU+BxxPBQdZXYAAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
 <XPD:ATTR name="LineStyle" type="LineStyleKind">lsRectilinear</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">924,351;829,351</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">860,511;765,511</XPD:ATTR>
 <XPD:REF name="Model">9sV6LhcuR0yypH+YCmhPDAAA</XPD:REF>
 <XPD:REF name="Head">t9Hw/aPTgUO9PmYexbYsgAAA</XPD:REF>
 <XPD:REF name="Tail">JbZhtIlHdUKKTiGWTOoj1gAA</XPD:REF>
@@ -15328,24 +15337,24 @@ the user, we can rename this base class to UserPokerHand
 </XPD:OBJ>
 <XPD:OBJ name="HeadQualifierCompartment" type="UMLQualifierCompartmentView" guid="EqoPKO8Q+U6hIXDGMu7hSgAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">-1000</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">-1000</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">-1064</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">-840</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">50</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">8</XPD:ATTR>
 <XPD:REF name="Model">jnGxdaRAwkWxZEdew9iiggAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="TailQualifierCompartment" type="UMLQualifierCompartmentView" guid="9CDoOEQCiUeqJEbu4q1r4wAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">-1000</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">-1000</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">-1064</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">-840</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">50</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">8</XPD:ATTR>
 <XPD:REF name="Model">xPTukAI4TkWB+baCpFu9OAAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[24]" type="UMLAssociationView" guid="63LLSosyDECDRx9gcDWpmQAA">
+<XPD:OBJ name="OwnedViews[25]" type="UMLAssociationView" guid="63LLSosyDECDRx9gcDWpmQAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
-<XPD:ATTR name="Points" type="Points">696,379;568,468</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">632,539;504,628</XPD:ATTR>
 <XPD:REF name="Model">uE209EKyRU+Qv40xptK+TgAA</XPD:REF>
 <XPD:REF name="Head">qchpY+2Cc0SKmTXhyeYW1QAA</XPD:REF>
 <XPD:REF name="Tail">t9Hw/aPTgUO9PmYexbYsgAAA</XPD:REF>
@@ -15411,30 +15420,49 @@ the user, we can rename this base class to UserPokerHand
 </XPD:OBJ>
 <XPD:OBJ name="HeadQualifierCompartment" type="UMLQualifierCompartmentView" guid="bmWfHTKx602ZjiZRAjgEXQAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">-1000</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">-1000</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">-1064</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">-840</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">50</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">8</XPD:ATTR>
 <XPD:REF name="Model">5rIW7Kuzdk+4I7W119J+ygAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="TailQualifierCompartment" type="UMLQualifierCompartmentView" guid="6Cw09vVVyUa41Y/+Ng7cSwAA">
 <XPD:ATTR name="Visible" type="boolean">False</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">-1000</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">-1000</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">-1064</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">-840</XPD:ATTR>
 <XPD:ATTR name="Width" type="integer">50</XPD:ATTR>
 <XPD:ATTR name="Height" type="integer">8</XPD:ATTR>
 <XPD:REF name="Model">Ry6nEpR8zUuGNJ1nBu8PdAAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[25]" type="UMLTextView" guid="pjnzPaWcW0Oov4RJPwlULAAA">
+<XPD:OBJ name="OwnedViews[26]" type="UMLNoteView" guid="lhnSBSEQBEuxTjhKHEjoDQAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">520</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">268</XPD:ATTR>
-<XPD:ATTR name="Width" type="integer">537</XPD:ATTR>
-<XPD:ATTR name="Height" type="integer">53</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Now, after all this design. I opened the main project and noticed that the PokerHand was a List&lt;Card&gt; type. 
-I hadn't anticipated this but I still liked my original design. Knowing that I cannot break the 
-interface, I look at an alternative design.
+<XPD:ATTR name="Left" type="integer">428</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">124</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">220</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">30</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">Access only through the Aggregate Root.
+</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[27]" type="UMLNoteLinkView" guid="6/WoUKzUT0+PuUPsS0P6oQAA">
+<XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
+<XPD:ATTR name="Points" type="Points">383,184;487,153</XPD:ATTR>
+<XPD:REF name="Head">lhnSBSEQBEuxTjhKHEjoDQAA</XPD:REF>
+<XPD:REF name="Tail">adTGryhy5ESLtRgFu5040QAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[28]" type="UMLTextView" guid="/0hQ3ZvqlEqXPZY9qq1HgwAA">
+<XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">696</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">60</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">474</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">113</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">So currently the domain diagram looks like this. All access to the component only allowed through
+the Aggregate Root (PokerHandComparer). Other public interfaces and objects currently
+accessable through the aggregate is the interface IPokerHandComparer, Card, PokerHand, and
+the enumeration classes.
+
+CardDeck may still fall away, because we don't currently have a specification that requires
+that it be present.
 </XPD:ATTR>
 </XPD:OBJ>
 </XPD:OBJ>
@@ -15468,6 +15496,7 @@ interface, I look at an alternative design.
 </XPD:OBJ>
 <XPD:OBJ name="OwnedElements[1]" type="UMLClass" guid="8Jdal9EM4UCtAq30ua8hrgAA">
 <XPD:ATTR name="Name" type="string">PokerHandComparer</XPD:ATTR>
+<XPD:ATTR name="StereotypeName" type="string">Aggregate Root</XPD:ATTR>
 <XPD:REF name="Namespace">O/+Ow/y+c0WB2YStx00PrgAA</XPD:REF>
 <XPD:ATTR name="#Views" type="integer">4</XPD:ATTR>
 <XPD:REF name="Views[0]">adTGryhy5ESLtRgFu5040QAA</XPD:REF>
