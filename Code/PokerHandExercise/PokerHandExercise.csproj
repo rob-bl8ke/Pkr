@@ -42,11 +42,15 @@
   <ItemGroup>
     <Compile Include="Classes\Card.cs" />
     <Compile Include="Classes\Constants.cs" />
+    <Compile Include="Classes\HandFactory\PokerHandFactory.cs" />
+    <Compile Include="Classes\Hands\StraightFlush.cs" />
     <Compile Include="Classes\IPokerHandComparer.cs" />
     <Compile Include="Classes\PokerHand.cs" />
     <Compile Include="Classes\PokerHandComparer.cs" />
+    <Compile Include="Classes\Hands\SpecifiedPokerHand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
