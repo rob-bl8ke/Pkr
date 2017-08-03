@@ -17,7 +17,10 @@ namespace PokerHandExercise.Tests.Tests
     [TestClass]
     public class PokerHandFactoryTests
     {
+        #region High Card Tests
+
         [TestMethod]
+        [TestCategory("High Card")]
         [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_A_LowHighCard_Combination_Returns_A_HighCard()
         {
@@ -25,13 +28,19 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
+        [TestCategory("High Card")]
         [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_A_HighHighCard_Combination_Returns_A_HighCard()
         {
             Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateHighHighCard()) is HighCard);
         }
 
+        #endregion
+
+        #region Pair Tests
+
         [TestMethod]
+        [TestCategory("Pair")]
         [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_A_LowPair_Combination_Returns_A_Pair()
         {
@@ -39,13 +48,19 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
+        [TestCategory("Pair")]
         [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_A_HighPair_Combination_Returns_A_Pair()
         {
             Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateHighPair()) is Pair);
         }
 
+        #endregion
+
+        #region Two Pair Tests
+
         [TestMethod]
+        [TestCategory("Two Pair")]
         [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_A_LowTwoPair_Combination_Returns_A_TwoPair()
         {
@@ -53,13 +68,19 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
+        [TestCategory("Two Pair")]
         [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_A_HighTwoPair_Combination_Returns_A_TwoPair()
         {
             Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateHighTwoPairs()) is TwoPair);
         }
 
+        #endregion
+
+        #region Three of a Kind Tests
+
         [TestMethod]
+        [TestCategory("Three of a Kind")]
         [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_A_LowThreeOfAKind_Combination_Returns_A_ThreeOfAKind()
         {
@@ -67,13 +88,19 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
+        [TestCategory("Three of a Kind")]
         [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_A_HighThreeOfAKind_Combination_Returns_A_ThreeOfAKind()
         {
             Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateHighThreeOfAKind()) is ThreeOfAKind);
         }
 
+        #endregion
+
+        #region Straight Tests
+
         [TestMethod]
+        [TestCategory("Straight")]
         [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_A_LowStraight_Combination_Returns_A_Straight()
         {
@@ -81,13 +108,19 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
+        [TestCategory("Straight")]
         [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_A_HighStraight_Combination_Returns_A_Straight()
         {
             Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateHighStraight()) is Straight);
         }
 
+        #endregion
+
+        #region Flush Tests
+
         [TestMethod]
+        [TestCategory("Flush")]
         [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_A_LowFlush_Combination_Returns_A_Flush()
         {
@@ -95,13 +128,19 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
+        [TestCategory("Flush")]
         [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_A_HighFlush_Combination_Returns_A_Flush()
         {
             Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateHighFlush()) is Flush);
         }
 
+        #endregion
+
+        #region Full House Tests
+
         [TestMethod]
+        [TestCategory("Full House")]
         [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_A_LowFullHouse_Combination_Returns_A_FullHouse()
         {
@@ -109,6 +148,7 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
+        [TestCategory("Full House")]
         [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_FullHouse_Spec_Example_1_Returns_FullHouse()
         {
@@ -125,6 +165,7 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
+        [TestCategory("Full House")]
         [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_FullHouse_Spec_Example_2_Returns_FullHouse()
         {
@@ -141,20 +182,31 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
+        [TestCategory("Full House")]
         [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_A_HighFullHouse_Combination_Returns_A_FullHouse()
         {
             Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateHighFullHouse()) is FullHouse);
         }
 
+        #endregion
+
+        #region Four of a Kind Tests
+
         [TestMethod]
+        [TestCategory("Four of a Kind")]
         [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_A_LowFourOfAKind_Combination_Returns_A_FourOfAKind()
         {
             Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateLowFourOfAKind()) is FourOfAKind);
         }
 
+        #endregion
+
+        #region Straight Flush Tests
+
         [TestMethod]
+        [TestCategory("Straight Flush")]
         [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_A_StraightFlush_Combination_DoesNot_Return_A_FourOfAKind()
         {
@@ -162,6 +214,7 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
+        [TestCategory("Straight Flush")]
         [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_A_HighStraightFlush_Combination_Returns_A_StraightFlush()
         {
@@ -169,6 +222,7 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
+        [TestCategory("Straight Flush")]
         [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_A_MidStraightFlush_Combination_Returns_A_StraightFlush()
         {
@@ -176,6 +230,7 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
+        [TestCategory("Straight Flush")]
         [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_A_AceLowStraightFlush_Combination_Returns_A_StraightFlush()
         {
@@ -184,6 +239,7 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
+        [TestCategory("Straight Flush")]
         [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_StraightFlush_Spec_Example_1_Returns_StraightFlush()
         {
@@ -200,6 +256,7 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
+        [TestCategory("Straight Flush")]
         [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_StraightFlush_Spec_Example_2_Returns_StraightFlush()
         {
@@ -216,6 +273,7 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
+        [TestCategory("Straight Flush")]
         [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_StraightFlush_Spec_Example_3_Returns_StraightFlush()
         {
@@ -232,6 +290,7 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
+        [TestCategory("Straight Flush")]
         [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_StraightFlush_Spec_Example_4_Returns_StraightFlush()
         {
@@ -247,12 +306,7 @@ namespace PokerHandExercise.Tests.Tests
             Assert.IsInstanceOfType(SpecifiedPokerHand(pokerHand), typeof(StraightFlush));
         }
 
-        [TestMethod]
-        [TestCategory("PokerHandFactory Tests")]
-        public void Factory_WhenPassed_A_HighThreeOfAKind_Combination_DoesNot_Return_A_StraightFlush()
-        {
-            Assert.IsFalse(SpecifiedPokerHand(PokerHandTestHelper.CreateHighThreeOfAKind()) is StraightFlush);
-        }
+        #endregion
 
         private SpecifiedPokerHand SpecifiedPokerHand(PokerHand pokerHand)
         {

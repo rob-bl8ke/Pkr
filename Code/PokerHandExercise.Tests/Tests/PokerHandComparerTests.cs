@@ -37,7 +37,7 @@ namespace PokerHandExercise.Tests.Tests
         #region High Straight Flush Tests
 
         [TestMethod]
-        [TestCategory("High Straight Flush")]
+        [TestCategory("Straight Flush")]
         public void HighStraightFlushVsLowStraightFlush()
         {
             var pokerHand1 = PokerHandTestHelper.CreateHighStraightFlush();
@@ -50,7 +50,7 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
-        [TestCategory("High Straight Flush")]
+        [TestCategory("Straight Flush")]
         public void MatchingStraightFlushes()
         {
             var pokerHand1 = PokerHandTestHelper.CreateAceLowStraightFlush();
@@ -61,7 +61,7 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
-        [TestCategory("High Straight Flush")]
+        [TestCategory("Straight Flush")]
         public void Comparer_LowerStraightFlush_Loses_To_HigherStraightFlush()
         {
             var pokerHand1 = PokerHandTestHelper.CreateHand(
@@ -85,7 +85,7 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
-        [TestCategory("High Straight Flush")]
+        [TestCategory("Straight Flush")]
         public void Comparer_HigherStraightFlush_Beats_LowerStraightFlush_Spec_Example_1()
         {
             var pokerHand1 = PokerHandTestHelper.CreateHand(
@@ -183,7 +183,7 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
-        [TestCategory("High Straight Flush")]
+        [TestCategory("Straight Flush")]
         public void Comparer_HigherFullHouse_Beats_LowerFullHouse_Spec_Example_1()
         {
             var pokerHand1 = PokerHandTestHelper.CreateHand(
