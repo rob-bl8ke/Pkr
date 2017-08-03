@@ -75,6 +75,40 @@ namespace PokerHandExercise.Tests.Tests
             Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateHighTwoPairs()) is TwoPair);
         }
 
+        [TestMethod]
+        [TestCategory("Two Pair")]
+        [TestCategory("PokerHandFactory Tests")]
+        public void Factory_WhenPassed_TwoPair_Spec_Example_1_Returns_TwoPair()
+        {
+            var pokerHand = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Club, CardValue.Four),
+                new Card(CardSuit.Spade, CardValue.Four),
+                new Card(CardSuit.Club, CardValue.Two),
+                new Card(CardSuit.Heart, CardValue.Queen),
+                new Card(CardSuit.Club, CardValue.Two)
+                );
+
+            Assert.IsTrue(SpecifiedPokerHand(pokerHand) is TwoPair);
+
+        }
+
+        [TestMethod]
+        [TestCategory("Two Pair")]
+        [TestCategory("PokerHandFactory Tests")]
+        public void Factory_WhenPassed_TwoPair_Spec_Example_2_Returns_TwoPair()
+        {
+            var pokerHand = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Club, CardValue.Jack),
+                new Card(CardSuit.Spade, CardValue.Jack),
+                new Card(CardSuit.Club, CardValue.Six),
+                new Card(CardSuit.Heart, CardValue.Queen),
+                new Card(CardSuit.Club, CardValue.Six)
+                );
+
+            Assert.IsTrue(SpecifiedPokerHand(pokerHand) is TwoPair);
+
+        }
+
         #endregion
 
         #region Three of a Kind Tests
@@ -93,6 +127,38 @@ namespace PokerHandExercise.Tests.Tests
         public void Factory_WhenPassed_A_HighThreeOfAKind_Combination_Returns_A_ThreeOfAKind()
         {
             Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateHighThreeOfAKind()) is ThreeOfAKind);
+        }
+
+        [TestMethod]
+        [TestCategory("Three of a Kind")]
+        [TestCategory("PokerHandFactory Tests")]
+        public void Factory_WhenPassed_ThreeOfAKind_Spec_Example_1_Returns_ThreeOfAKind()
+        {
+            var pokerHand = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Club, CardValue.Queen),
+                new Card(CardSuit.Spade, CardValue.Nine),
+                new Card(CardSuit.Club, CardValue.Queen),
+                new Card(CardSuit.Heart, CardValue.Queen),
+                new Card(CardSuit.Club, CardValue.Two)
+                );
+
+            Assert.IsTrue(SpecifiedPokerHand(pokerHand) is ThreeOfAKind);
+        }
+
+        [TestMethod]
+        [TestCategory("Three of a Kind")]
+        [TestCategory("PokerHandFactory Tests")]
+        public void Factory_WhenPassed_ThreeOfAKind_Spec_Example_2_Returns_ThreeOfAKind()
+        {
+            var pokerHand = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Club, CardValue.Seven),
+                new Card(CardSuit.Diamond, CardValue.Seven),
+                new Card(CardSuit.Club, CardValue.Seven),
+                new Card(CardSuit.Heart, CardValue.Four),
+                new Card(CardSuit.Club, CardValue.Three)
+                );
+
+            Assert.IsTrue(SpecifiedPokerHand(pokerHand) is ThreeOfAKind);
         }
 
         #endregion
