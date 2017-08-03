@@ -13,7 +13,7 @@ namespace PokerHandExercise.Classes.Hands
             get
             {
                 var pairs = pokerHand.GroupBy(c => c.Value)
-                    .Select(g => new { Key = g.Key, Weighting = base.GetCardValueWeighting(g.Key), Count = g.Count() })
+                    .Select(g => new { Key = g.Key, Weighting = base.GetCardWeighting(g.Key), Count = g.Count() })
                     .Where( o => o.Count == 2);
 
                 var highestPair = pairs.Single(o => o.Weighting == pairs.Select(o1 => o1.Weighting).Max());
@@ -27,7 +27,7 @@ namespace PokerHandExercise.Classes.Hands
             get
             {
                 var pairs = pokerHand.GroupBy(c => c.Value)
-                    .Select(g => new { Key = g.Key, Weighting = base.GetCardValueWeighting(g.Key), Count = g.Count() })
+                    .Select(g => new { Key = g.Key, Weighting = base.GetCardWeighting(g.Key), Count = g.Count() })
                     .Where(o => o.Count == 2);
 
                 var lowestPair = pairs.Single(o => o.Weighting == pairs.Select(o1 => o1.Weighting).Min());

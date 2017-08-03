@@ -11,6 +11,11 @@ namespace PokerHandExercise.Classes.Hands
         public int Weighting { get; protected set; }
         protected readonly PokerHand pokerHand;
 
+        public Card[] Cards
+        {
+            get { return this.pokerHand.ToArray(); }
+        }
+
         public int NoOfCards
         {
             get
@@ -43,15 +48,23 @@ namespace PokerHandExercise.Classes.Hands
                 return 0;
         }
 
+        //TODO: Note: all comparisons on a card should look only at the card number.
+        //  Why? Well a Jack of Spades is comparable to a Jack of Hearts (unless
+        // one is interested in sorting by suite - which is not a responsibility
+        // of this component.
+
+        // Equals() is different, and if we wanted to look at equality then 
+        // suite and number will matter.
+
         protected int CompareSingleCard(CardValue myValue, CardValue otherValue)
         {
-            int myWeighting = GetCardValueWeighting(myValue);
-            int otherWeighting = GetCardValueWeighting(otherValue);
+            int myWeighting = GetCardWeighting(myValue);
+            int otherWeighting = GetCardWeighting(otherValue);
 
             return myWeighting.CompareTo(otherWeighting);
         }
 
-        protected int GetCardValueWeighting(CardValue cardValue)
+        protected int GetCardWeighting(CardValue cardValue)
         {
             if (cardValue == CardValue.Ace)
                 return 1000;
@@ -59,22 +72,21 @@ namespace PokerHandExercise.Classes.Hands
                 return ((int)cardValue);
         }
 
-        protected int CompareHighToLowCards(SpecifiedPokerHand thisHand, SpecifiedPokerHand otherHand)
+        protected int CompareHighToLowCards(Card[] theseCards, Card[] otherCards)
         {
-            for (int x = 0; x < thisHand.NoOfCards; x++)
+            for (int x = theseCards.Count() - 1; x >= 0; x--)
             {
-                if (thisHand[x].Value == CardValue.Ace && otherHand[x].Value != CardValue.Ace)
-                    return 1;
-                else if (otherHand[x].Value == CardValue.Ace && thisHand[x].Value != CardValue.Ace)
-                    return -1;
-
-                int val = thisHand[x].CompareTo(otherHand[x]);
-
+                int val = CompareSingleCard(theseCards[x].Value, otherCards[x].Value);
                 if (val != 0)
                     return val;
             }
 
             return 0;
+        }
+
+        protected int CompareHighToLowCards(SpecifiedPokerHand thisHand, SpecifiedPokerHand otherHand)
+        {
+            return CompareHighToLowCards(thisHand.Cards, otherHand.Cards);
         }
     }
 }

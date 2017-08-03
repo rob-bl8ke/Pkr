@@ -30,23 +30,10 @@ namespace PokerHandExercise.Classes.Hands
             if (other is Straight)
             {
                 Straight otherStraight = other as Straight;
-
-                if (this.HighCard == CardValue.Ace && otherStraight.HighCard != CardValue.Ace)
-                    return 1;
-
-                if (otherStraight.HighCard == CardValue.Ace && this.HighCard != CardValue.Ace)
-                    return -1;
-                else if (this.HighCard > otherStraight.HighCard)
-                    return 1;
-                else if (this.HighCard < otherStraight.HighCard)
-                    return -1;
-                else
-                    return 0;
+                return base.CompareSingleCard(this.HighCard, otherStraight.HighCard);
             }
             else
-            {
                 return base.CompareTo(other);
-            }
         }
     }
 }

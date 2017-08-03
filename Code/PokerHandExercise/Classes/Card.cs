@@ -18,6 +18,14 @@ namespace PokerHandExercise.Classes
             Value = value;
         }
 
+        // Note: all comparisons on a card should look only at the card number.
+        //  Why? Well a Jack of Spades is comparable to a Jack of Hearts (unless
+        // one is interested in sorting by suite - which is not a responsibility
+        // of this component.
+
+        // Equals() is different, and if we wanted to look at equality then 
+        // suite and number will matter.
+
         public int CompareTo(Card other)
         {
             // Note: CompareTo != Equals() in this case. Equals is always more specific.

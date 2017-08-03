@@ -8,6 +8,8 @@ namespace PokerHandExercise.Classes
     {
         public int CompareHands(PokerHand hand1, PokerHand hand2)
         {
+            //TODO: Pre-condion - both hands must have exactly 5 cards!
+
             //TODO: Important! : A function like this SHOULD NOT HAVE ANY SIDE-EFFECTS on passed int parameters...
             PokerHand hand1Copy = CreateCopy(hand1);
             PokerHand hand2Copy = CreateCopy(hand2);

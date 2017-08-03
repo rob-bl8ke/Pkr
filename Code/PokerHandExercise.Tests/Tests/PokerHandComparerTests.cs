@@ -159,6 +159,34 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
+        public void Comparer_WhenComparing_2ndHighest_High_CardStraight_To_2ndHighest_Low_CardStraight_Ensure_High_Wins()
+        {
+            var pokerHand1 = new PokerHand()
+            {
+                new Card { Suit = CardSuit.Club, Value = CardValue.King },
+                new Card { Suit = CardSuit.Diamond, Value = CardValue.Queen },
+                new Card { Suit = CardSuit.Club, Value = CardValue.Jack },
+                new Card { Suit = CardSuit.Heart, Value = CardValue.Ten },
+                new Card { Suit = CardSuit.Club, Value = CardValue.Nine }
+            };
+
+            var pokerHand2 = new PokerHand()
+            {
+                new Card { Suit = CardSuit.Club, Value = CardValue.King },
+                new Card { Suit = CardSuit.Diamond, Value = CardValue.Jack },
+                new Card { Suit = CardSuit.Club, Value = CardValue.Ten },
+                new Card { Suit = CardSuit.Heart, Value = CardValue.Nine },
+                new Card { Suit = CardSuit.Club, Value = CardValue.Eight }
+            };
+
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(1, result, "Expected Hand1 to beat Hand2");
+        }
+
+
+
+        [TestMethod]
         public void Comparer_WhenComparingHighThreeOfAKind_ToLowThreeOfAKind_Ensures_High_Wins()
         {
             var pokerHand1 = PokerHandTestHelper.CreateHighThreeOfAKind();
