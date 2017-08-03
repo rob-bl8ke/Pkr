@@ -8,21 +8,31 @@ namespace PokerHandExercise.Classes.Hands
 {
     internal class TwoPair : SpecifiedPokerHand
     {
-        public Card HighestPair
+        public CardValue HighestPairValue
         {
             get
             {
-                var groups = pokerHand.GroupBy(c => c.Value);
-                return groups.Where(g => g.Count() == 2).Max(g => g.First());
+                var pairs = pokerHand.GroupBy(c => c.Value)
+                    .Select(g => new { Key = g.Key, Weighting = GetCardValueWeighting(g.Key), Count = g.Count() })
+                    .Where( o => o.Count == 2);
+
+                var highestPair = pairs.Single(o => o.Weighting == pairs.Select(o1 => o1.Weighting).Max());
+
+                return highestPair.Key;
             }
         }
 
-        public Card LowestPair
+        public CardValue LowestPairValue
         {
             get
             {
-                var groups = pokerHand.GroupBy(c => c.Value);
-                return groups.Where(g => g.Count() == 2).Min(g => g.First());
+                var pairs = pokerHand.GroupBy(c => c.Value)
+                    .Select(g => new { Key = g.Key, Weighting = GetCardValueWeighting(g.Key), Count = g.Count() })
+                    .Where(o => o.Count == 2);
+
+                var lowestPair = pairs.Single(o => o.Weighting == pairs.Select(o1 => o1.Weighting).Min());
+
+                return lowestPair.Key;
             }
         }
 
@@ -46,23 +56,15 @@ namespace PokerHandExercise.Classes.Hands
             {
                 TwoPair otherTwoPair = other as TwoPair;
 
-                if (this.HighestPair.Value != otherTwoPair.HighestPair.Value)
-                {
-                    return this.HighestPair.CompareTo(otherTwoPair.HighestPair);
-                }
-                else if (this.LowestPair.Value != otherTwoPair.LowestPair.Value)
-                {
-                    return this.LowestPair.CompareTo(otherTwoPair.LowestPair);
-                }
+                if (this.HighestPairValue != otherTwoPair.HighestPairValue)
+                    return CompareSingleCard(this.HighestPairValue, otherTwoPair.HighestPairValue);
+                
+                else if (this.LowestPairValue != otherTwoPair.LowestPairValue)
+                    return CompareSingleCard(this.LowestPairValue, otherTwoPair.LowestPairValue);
+                
                 else if (this.FifthCard.Value != otherTwoPair.FifthCard.Value)
-                {
-                    if (this.FifthCard.Value == CardValue.Ace && otherTwoPair.FifthCard.Value != CardValue.Ace)
-                        return 1;
-                    else if (this.FifthCard.Value != CardValue.Ace && otherTwoPair.FifthCard.Value == CardValue.Ace)
-                        return -1;
-                    else
-                        return this.FifthCard.CompareTo(otherTwoPair.FifthCard);
-                }
+                    return CompareSingleCard(this.FifthCard.Value, otherTwoPair.FifthCard.Value);
+                
                 else
                     return 0;
             }
@@ -70,6 +72,22 @@ namespace PokerHandExercise.Classes.Hands
             {
                 return base.CompareTo(other);
             }
+        }
+
+        private int CompareSingleCard(CardValue myValue, CardValue otherValue)
+        {
+            int myWeighting = GetCardValueWeighting(myValue);
+            int otherWeighting = GetCardValueWeighting(otherValue);
+
+            return myWeighting.CompareTo(otherWeighting);
+        }
+
+        private int GetCardValueWeighting(CardValue cardValue)
+        {
+            if (cardValue == CardValue.Ace)
+                return 1000;
+            else
+                return ((int)cardValue);
         }
     }
 }
