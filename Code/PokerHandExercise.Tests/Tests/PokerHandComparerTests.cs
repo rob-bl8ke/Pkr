@@ -60,6 +60,30 @@ namespace PokerHandExercise.Tests.Tests
             Assert.AreEqual(0, result, "Expected Hand1 and Hand2 be equivalent");
         }
 
+        [TestMethod]
+        [TestCategory("High Straight Flush")]
+        public void Comparer_LowerStraightFlush_Loses_To_HigherStraightFlush()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Diamond, CardValue.Eight),
+                new Card(CardSuit.Diamond, CardValue.Seven),
+                new Card(CardSuit.Diamond, CardValue.Six),
+                new Card(CardSuit.Diamond, CardValue.Five),
+                new Card(CardSuit.Diamond, CardValue.Four)
+                );
+
+            var pokerHand2 = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Heart, CardValue.Five),
+                new Card(CardSuit.Heart, CardValue.Six),
+                new Card(CardSuit.Heart, CardValue.Seven),
+                new Card(CardSuit.Heart, CardValue.Eight),
+                new Card(CardSuit.Heart, CardValue.Nine)
+                );
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(-1, result, "Expected Hand1 to lose to Hand2");
+        }
+
         #endregion
 
         #region Four of a Kind Tests
@@ -232,6 +256,33 @@ namespace PokerHandExercise.Tests.Tests
 
             var result = _comparer.CompareHands(pokerHand1, pokerHand2);
             Assert.AreEqual(1, result, "Expected Hand1 to beat Hand2");
+        }
+
+        [TestMethod]
+        [TestCategory("Straight")]
+        public void Comparer_WhenComparing_OneCardAceStraight_To_HigherStraight_Ensure_OneCardAceStraight_Loses()
+        {
+            // This is a test build specifically on the first paragraph in "Appendix: Poker hands and their precedence".
+            var pokerHand1 = new PokerHand()
+            {
+                new Card { Suit = CardSuit.Club, Value = CardValue.Ace },
+                new Card { Suit = CardSuit.Diamond, Value = CardValue.Two },
+                new Card { Suit = CardSuit.Club, Value = CardValue.Three },
+                new Card { Suit = CardSuit.Heart, Value = CardValue.Four },
+                new Card { Suit = CardSuit.Club, Value = CardValue.Five }
+            };
+
+            var pokerHand2 = new PokerHand()
+            {
+                new Card { Suit = CardSuit.Club, Value = CardValue.Nine },
+                new Card { Suit = CardSuit.Diamond, Value = CardValue.Ten },
+                new Card { Suit = CardSuit.Club, Value = CardValue.Jack },
+                new Card { Suit = CardSuit.Heart, Value = CardValue.Queen },
+                new Card { Suit = CardSuit.Club, Value = CardValue.King }
+            };
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(-1, result, "Expected Hand1 to lose to Hand2");
         }
 
         #endregion

@@ -23,22 +23,10 @@ namespace PokerHandExercise.Classes.Hands
             if (other is FourOfAKind)
             {
                 FourOfAKind fourOfAKind = other as FourOfAKind;
-
-                if (this.HighCard == CardValue.Ace && fourOfAKind.HighCard != CardValue.Ace)
-                    return 1;
-                if (fourOfAKind.HighCard == CardValue.Ace && this.HighCard != CardValue.Ace)
-                    return -1;
-                else if (this.HighCard > fourOfAKind.HighCard)
-                    return 1;
-                else if (this.HighCard < fourOfAKind.HighCard)
-                    return -1;
-                else
-                    return 0;
+                return base.CompareSingleCard(this.HighCard, fourOfAKind.HighCard);
             }
             else
-            {
                 return base.CompareTo(other);
-            }
         }
     }
 }

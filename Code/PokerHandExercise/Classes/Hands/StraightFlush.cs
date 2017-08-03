@@ -26,23 +26,10 @@ namespace PokerHandExercise.Classes.Hands
             if (other is StraightFlush)
             {
                 StraightFlush otherStraightFlush = other as StraightFlush;
-
-                if (this.HighCard == CardValue.Ace && otherStraightFlush.HighCard != CardValue.Ace)
-                    return 1;
-
-                if (otherStraightFlush.HighCard == CardValue.Ace && this.HighCard != CardValue.Ace)
-                    return -1;
-                else if (this.HighCard > otherStraightFlush.HighCard)
-                    return 1;
-                else if (this.HighCard < otherStraightFlush.HighCard)
-                    return -1;
-                else
-                    return 0;
+                return base.CompareSingleCard(this.HighCard, otherStraightFlush.HighCard);
             }
             else
-            {
                 return base.CompareTo(other);
-            }
         }
     }
 }

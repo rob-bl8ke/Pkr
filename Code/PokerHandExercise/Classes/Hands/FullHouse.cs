@@ -22,18 +22,8 @@ namespace PokerHandExercise.Classes.Hands
         {
             if (other is FullHouse)
             {
-                FullHouse fullHouse = other as FullHouse;
-
-                if (this.HighCard == CardValue.Ace && fullHouse.HighCard != CardValue.Ace)
-                    return 1;
-                if (fullHouse.HighCard == CardValue.Ace && this.HighCard != CardValue.Ace)
-                    return -1;
-                else if (this.HighCard > fullHouse.HighCard)
-                    return 1;
-                else if (this.HighCard < fullHouse.HighCard)
-                    return -1;
-                else
-                    return 0;
+                FullHouse otherFullHouse = other as FullHouse;
+                return base.CompareSingleCard(this.HighCard, otherFullHouse.HighCard);
             }
             else
             {
