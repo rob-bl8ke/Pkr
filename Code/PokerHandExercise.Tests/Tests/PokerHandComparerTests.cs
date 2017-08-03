@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PokerHandExercise.Classes;
+using PokerHandExercise.Classes.Exceptions;
 using PokerHandExercise.Tests.Classes;
 
 namespace PokerHandExercise.Tests.Tests
@@ -17,6 +18,21 @@ namespace PokerHandExercise.Tests.Tests
         {
             _comparer = new PokerHandComparer();
         }
+
+        #region General
+
+        [TestMethod]
+        [TestCategory("General")]
+        [ExpectedException(typeof(IllegalNoOfCardsInHandException))]
+        public void Comparer_PokerHands_NotHaving_FiveCards_ThrowsException()
+        {
+            var pokerHand1 = new PokerHand() { new Card(CardSuit.Club, CardValue.Nine) };
+            var pokerHand2 = new PokerHand() { new Card(CardSuit.Spade, CardValue.Queen) };
+
+            _comparer.CompareHands(pokerHand1, pokerHand2);
+        }
+
+        #endregion
 
         #region High Straight Flush Tests
 

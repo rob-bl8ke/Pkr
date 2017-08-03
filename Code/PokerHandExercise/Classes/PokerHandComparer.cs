@@ -1,4 +1,5 @@
 ﻿
+using PokerHandExercise.Classes.Exceptions;
 using PokerHandExercise.Classes.HandFactory;
 using PokerHandExercise.Classes.Hands;
 
@@ -8,28 +9,38 @@ namespace PokerHandExercise.Classes
     {
         public int CompareHands(PokerHand hand1, PokerHand hand2)
         {
-            //TODO: Pre-condion - both hands must have exactly 5 cards!
+            try
+            {
+                //Pre-condition - both hands must have exactly 5 cards!
+                if (hand1.Count != 5 || hand2.Count != 5)
+                    throw new IllegalNoOfCardsInHandException("An illegal number of cards was assigned to a poker hand. A poker hand must have five cards.");
 
-            //Important! : A function like this SHOULD NOT HAVE ANY SIDE-EFFECTS on passed in parameters from the client...
-            // the client may be expect a certain state afterwards (post-conditions)... best to make a copy.
-            PokerHand hand1Copy = CreateCopy(hand1);
-            PokerHand hand2Copy = CreateCopy(hand2);
+                // side-effect free (expected post condition)
+                PokerHand hand1Copy = CreateCopy(hand1);
+                PokerHand hand2Copy = CreateCopy(hand2);
 
-            // a this point, we know the PokerHand copy has been made, and sorted...
-            // the rest of the logic assumes this... could be more defensive at the expense of performance.
-            // for now, probably good enough.
-            PokerHandFactory pokerHandFactory = new PokerHandFactory();
+                // rest of the logic assumes above is sorted...
+                PokerHandFactory pokerHandFactory = new PokerHandFactory();
 
-            SpecifiedPokerHand specifiedHand1 = pokerHandFactory.Create(hand1Copy);
-            SpecifiedPokerHand specifiedHand2 = pokerHandFactory.Create(hand2Copy);
+                SpecifiedPokerHand specifiedHand1 = pokerHandFactory.Create(hand1Copy);
+                SpecifiedPokerHand specifiedHand2 = pokerHandFactory.Create(hand2Copy);
 
-            return specifiedHand1.CompareTo(specifiedHand2);
+                return specifiedHand1.CompareTo(specifiedHand2);
+            }
+            catch (IllegalNoOfCardsInHandException)
+            {
+                // Any necessary logging here...
+                throw;
+            }
+            catch (UnknownPokerComparisonException ex)
+            {
+                // Any necessary logging here...
+                throw new UnknownPokerComparisonException("An unknown exception occurred while trying to compare poker hands.", ex);
+            }
         }
 
         private PokerHand CreateCopy(PokerHand pokerHand)
         {
-            // possibly not the most efficient, however, for now I'm more interested in
-            // getting the logic to work! Can always optimize later if necessary.
             Card[] cards = new Card[pokerHand.Count];
             pokerHand.CopyTo(cards);
 
