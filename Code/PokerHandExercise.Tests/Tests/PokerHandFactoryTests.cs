@@ -110,6 +110,38 @@ namespace PokerHandExercise.Tests.Tests
 
         [TestMethod]
         [TestCategory("PokerHandFactory Tests")]
+        public void Factory_WhenPassed_FullHouse_Spec_Example_1_Returns_FullHouse()
+        {
+            var pokerHand = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Heart, CardValue.Jack),
+                new Card(CardSuit.Heart, CardValue.Jack),
+                new Card(CardSuit.Heart, CardValue.Jack),
+                new Card(CardSuit.Heart, CardValue.Three),
+                new Card(CardSuit.Heart, CardValue.Three)
+                );
+
+            // could use this assertion, but i prefer the "IsTrue" which I feel is more readable.
+            Assert.IsInstanceOfType(SpecifiedPokerHand(pokerHand), typeof(FullHouse));
+        }
+
+        [TestMethod]
+        [TestCategory("PokerHandFactory Tests")]
+        public void Factory_WhenPassed_FullHouse_Spec_Example_2_Returns_FullHouse()
+        {
+            var pokerHand = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Heart, CardValue.Ace),
+                new Card(CardSuit.Heart, CardValue.Ace),
+                new Card(CardSuit.Heart, CardValue.Ace),
+                new Card(CardSuit.Heart, CardValue.Nine),
+                new Card(CardSuit.Heart, CardValue.Nine)
+                );
+
+            // could use this assertion, but i prefer the "IsTrue" which I feel is more readable.
+            Assert.IsInstanceOfType(SpecifiedPokerHand(pokerHand), typeof(FullHouse));
+        }
+
+        [TestMethod]
+        [TestCategory("PokerHandFactory Tests")]
         public void Factory_WhenPassed_A_HighFullHouse_Combination_Returns_A_FullHouse()
         {
             Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateHighFullHouse()) is FullHouse);
@@ -149,6 +181,70 @@ namespace PokerHandExercise.Tests.Tests
         {
             // could use this assertion, but i prefer the "IsTrue" which I feel is more readable.
             Assert.IsInstanceOfType(SpecifiedPokerHand(PokerHandTestHelper.CreateAceLowStraightFlush()), typeof(StraightFlush));
+        }
+
+        [TestMethod]
+        [TestCategory("PokerHandFactory Tests")]
+        public void Factory_WhenPassed_StraightFlush_Spec_Example_1_Returns_StraightFlush()
+        {
+            var pokerHand = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Heart, CardValue.Nine),
+                new Card(CardSuit.Heart, CardValue.Ten),
+                new Card(CardSuit.Heart, CardValue.Jack),
+                new Card(CardSuit.Heart, CardValue.Queen),
+                new Card(CardSuit.Heart, CardValue.King)
+                );
+
+            // could use this assertion, but i prefer the "IsTrue" which I feel is more readable.
+            Assert.IsInstanceOfType(SpecifiedPokerHand(pokerHand), typeof(StraightFlush));
+        }
+
+        [TestMethod]
+        [TestCategory("PokerHandFactory Tests")]
+        public void Factory_WhenPassed_StraightFlush_Spec_Example_2_Returns_StraightFlush()
+        {
+            var pokerHand = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Diamond, CardValue.Three),
+                new Card(CardSuit.Diamond, CardValue.Four),
+                new Card(CardSuit.Diamond, CardValue.Five),
+                new Card(CardSuit.Diamond, CardValue.Six),
+                new Card(CardSuit.Diamond, CardValue.Seven)
+                );
+
+            // could use this assertion, but i prefer the "IsTrue" which I feel is more readable.
+            Assert.IsInstanceOfType(SpecifiedPokerHand(pokerHand), typeof(StraightFlush));
+        }
+
+        [TestMethod]
+        [TestCategory("PokerHandFactory Tests")]
+        public void Factory_WhenPassed_StraightFlush_Spec_Example_3_Returns_StraightFlush()
+        {
+            var pokerHand = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Club, CardValue.Ace),
+                new Card(CardSuit.Club, CardValue.Two),
+                new Card(CardSuit.Club, CardValue.Three),
+                new Card(CardSuit.Club, CardValue.Four),
+                new Card(CardSuit.Club, CardValue.Five)
+                );
+
+            // could use this assertion, but i prefer the "IsTrue" which I feel is more readable.
+            Assert.IsInstanceOfType(SpecifiedPokerHand(pokerHand), typeof(StraightFlush));
+        }
+
+        [TestMethod]
+        [TestCategory("PokerHandFactory Tests")]
+        public void Factory_WhenPassed_StraightFlush_Spec_Example_4_Returns_StraightFlush()
+        {
+            var pokerHand = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Spade, CardValue.Ten),
+                new Card(CardSuit.Spade, CardValue.Jack),
+                new Card(CardSuit.Spade, CardValue.Queen),
+                new Card(CardSuit.Spade, CardValue.King),
+                new Card(CardSuit.Spade, CardValue.Ace)
+                );
+
+            // could use this assertion, but i prefer the "IsTrue" which I feel is more readable.
+            Assert.IsInstanceOfType(SpecifiedPokerHand(pokerHand), typeof(StraightFlush));
         }
 
         [TestMethod]

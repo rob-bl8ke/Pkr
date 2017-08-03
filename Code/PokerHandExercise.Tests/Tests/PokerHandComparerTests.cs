@@ -84,6 +84,30 @@ namespace PokerHandExercise.Tests.Tests
             Assert.AreEqual(-1, result, "Expected Hand1 to lose to Hand2");
         }
 
+        [TestMethod]
+        [TestCategory("High Straight Flush")]
+        public void Comparer_HigherStraightFlush_Beats_LowerStraightFlush_Spec_Example_1()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Diamond, CardValue.Eight),
+                new Card(CardSuit.Diamond, CardValue.Nine),
+                new Card(CardSuit.Diamond, CardValue.Ten),
+                new Card(CardSuit.Diamond, CardValue.Jack),
+                new Card(CardSuit.Diamond, CardValue.Queen)
+                );
+
+            var pokerHand2 = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Diamond, CardValue.Six),
+                new Card(CardSuit.Diamond, CardValue.Seven),
+                new Card(CardSuit.Diamond, CardValue.Eight),
+                new Card(CardSuit.Diamond, CardValue.Nine),
+                new Card(CardSuit.Diamond, CardValue.Ten)
+                );
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(1, result, "Expected Hand2 to lose to Hand1");
+        }
+
         #endregion
 
         #region Four of a Kind Tests
@@ -156,6 +180,30 @@ namespace PokerHandExercise.Tests.Tests
 
             var result = _comparer.CompareHands(pokerHand1, pokerHand2);
             Assert.AreEqual(0, result, "Expected Hand1 and Hand2 be equivalent");
+        }
+
+        [TestMethod]
+        [TestCategory("High Straight Flush")]
+        public void Comparer_HigherFullHouse_Beats_LowerFullHouse_Spec_Example_1()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Diamond, CardValue.Five),
+                new Card(CardSuit.Diamond, CardValue.Five),
+                new Card(CardSuit.Diamond, CardValue.Five),
+                new Card(CardSuit.Diamond, CardValue.Queen),
+                new Card(CardSuit.Diamond, CardValue.Queen)
+                );
+
+            var pokerHand2 = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Diamond, CardValue.Ace),
+                new Card(CardSuit.Diamond, CardValue.Ace),
+                new Card(CardSuit.Diamond, CardValue.Four),
+                new Card(CardSuit.Diamond, CardValue.Four),
+                new Card(CardSuit.Diamond, CardValue.Four)
+                );
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(1, result, "Expected Hand2 to lose to Hand1");
         }
 
         #endregion
