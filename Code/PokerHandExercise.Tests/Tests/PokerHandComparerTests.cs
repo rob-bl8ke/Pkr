@@ -34,7 +34,7 @@ namespace PokerHandExercise.Tests.Tests
 
         #endregion
 
-        #region High Straight Flush Tests
+        #region Straight Flush Tests
 
         [TestMethod]
         [TestCategory("Straight Flush")]
@@ -370,6 +370,31 @@ namespace PokerHandExercise.Tests.Tests
             Assert.AreEqual(0, result, "Expected Hand1 and Hand2 be equivalent");
         }
 
+        [TestMethod]
+        [TestCategory("Three of a Kind")]
+        public void Comparer_Comparing_ThreeOfAKind_Example_1()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Club, CardValue.Queen),
+                new Card(CardSuit.Spade, CardValue.Nine),
+                new Card(CardSuit.Club, CardValue.Queen),
+                new Card(CardSuit.Heart, CardValue.Queen),
+                new Card(CardSuit.Club, CardValue.Two)
+                );
+
+
+            var pokerHand2 = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Club, CardValue.Seven),
+                new Card(CardSuit.Diamond, CardValue.Seven),
+                new Card(CardSuit.Club, CardValue.Seven),
+                new Card(CardSuit.Heart, CardValue.Four),
+                new Card(CardSuit.Club, CardValue.Three)
+                );
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(1, result, "Expected Hand1 to beat Hand2");
+        }
+
         #endregion
 
         #region Two Pair Tests
@@ -656,18 +681,91 @@ namespace PokerHandExercise.Tests.Tests
             var pokerHand1 = PokerHandTestHelper.CreateHand(
                 
                 new Card(CardSuit.Club, CardValue.Jack),
-                new Card(CardSuit.Club, CardValue.Queen),
+                new Card(CardSuit.Spade, CardValue.Queen),
                 new Card(CardSuit.Club, CardValue.Nine),
-                new Card(CardSuit.Club, CardValue.Ten),
+                new Card(CardSuit.Diamond, CardValue.Ten),
                 new Card(CardSuit.Club, CardValue.King)
                 );
 
             var pokerHand2 = PokerHandTestHelper.CreateHand(
                 new Card(CardSuit.Club, CardValue.Queen),
-                new Card(CardSuit.Club, CardValue.Ten),
+                new Card(CardSuit.Spade, CardValue.Ten),
                 new Card(CardSuit.Club, CardValue.Jack),
-                new Card(CardSuit.Club, CardValue.King),
+                new Card(CardSuit.Diamond, CardValue.King),
                 new Card(CardSuit.Club, CardValue.Nine)
+                );
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(0, result, "Expected Hand1 and Hand2 be equivalent");
+        }
+
+        [TestMethod]
+        [TestCategory("High Card")]
+        public void Comparer_Comparing_HighCards_Example_1()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateHand(
+
+                new Card(CardSuit.Club, CardValue.King),
+                new Card(CardSuit.Diamond, CardValue.Ten),
+                new Card(CardSuit.Club, CardValue.Five),
+                new Card(CardSuit.Heart, CardValue.Four),
+                new Card(CardSuit.Club, CardValue.Three)
+                );
+
+            var pokerHand2 = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Club, CardValue.King),
+                new Card(CardSuit.Spade, CardValue.Nine),
+                new Card(CardSuit.Club, CardValue.Eight),
+                new Card(CardSuit.Heart, CardValue.Three),
+                new Card(CardSuit.Club, CardValue.Two)
+                );
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(1, result, "Expected Hand1 to beat Hand2");
+        }
+
+        [TestMethod]
+        [TestCategory("High Card")]
+        public void Comparer_Comparing_HighCards_Example_2()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Club, CardValue.Ace),
+                new Card(CardSuit.Diamond, CardValue.Jack),
+                new Card(CardSuit.Club, CardValue.Six),
+                new Card(CardSuit.Heart, CardValue.Five),
+                new Card(CardSuit.Club, CardValue.Three)
+                );
+
+            var pokerHand2 = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Club, CardValue.Ace),
+                new Card(CardSuit.Diamond, CardValue.Jack),
+                new Card(CardSuit.Club, CardValue.Six),
+                new Card(CardSuit.Heart, CardValue.Five),
+                new Card(CardSuit.Club, CardValue.Two)
+                );
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(1, result, "Expected Hand1 to beat Hand2");
+        }
+
+        [TestMethod]
+        [TestCategory("High Card")]
+        public void Comparer_Comparing_HighCards_Example_3()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Club, CardValue.Jack),
+                new Card(CardSuit.Diamond, CardValue.Ten),
+                new Card(CardSuit.Club, CardValue.Seven),
+                new Card(CardSuit.Heart, CardValue.Six),
+                new Card(CardSuit.Club, CardValue.Five)
+                );
+
+            var pokerHand2 = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Diamond, CardValue.Jack),
+                new Card(CardSuit.Diamond, CardValue.Ten),
+                new Card(CardSuit.Spade, CardValue.Seven),
+                new Card(CardSuit.Heart, CardValue.Six),
+                new Card(CardSuit.Club, CardValue.Five)
                 );
 
             var result = _comparer.CompareHands(pokerHand1, pokerHand2);
