@@ -169,7 +169,7 @@ namespace PokerHandExercise.Tests.Classes
             );
         }
 
-        public static PokerHand CreatePairDifferentThirdCardValue(CardValue thirdCard, CardValue fourthCard, CardValue fifthCard)
+        public static PokerHand CreatePairDifferentNonPairCardValue(CardValue thirdCard, CardValue fourthCard, CardValue fifthCard)
         {
             return CreateHand(new Tuple<CardSuit, CardValue>(CardSuit.Heart, CardValue.Five),
               new Tuple<CardSuit, CardValue>(CardSuit.Club, CardValue.Five),
