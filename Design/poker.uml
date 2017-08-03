@@ -3129,7 +3129,7 @@ model looks like this.
 <XPD:REF name="DiagramOwner">0RZ3rNMFOUygU5egs18rMAAA</XPD:REF>
 <XPD:OBJ name="DiagramView" type="UMLClassDiagramView" guid="TxiyJkPRwUmBYZnlAxmXdwAA">
 <XPD:REF name="Diagram">QHvp8DPA2E6w1911AatAbgAA</XPD:REF>
-<XPD:ATTR name="#OwnedViews" type="integer">34</XPD:ATTR>
+<XPD:ATTR name="#OwnedViews" type="integer">33</XPD:ATTR>
 <XPD:OBJ name="OwnedViews[0]" type="UMLInterfaceView" guid="3cdDnDXog02sJk0iNxEkYwAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
 <XPD:ATTR name="Left" type="integer">32</XPD:ATTR>
@@ -4107,18 +4107,7 @@ model looks like this.
 <XPD:REF name="Model">kLDg2QCSmkaUTgT35+x3lQAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[29]" type="UMLTextView" guid="GE6CDbIp0kaDcN3dUbxSLAAA">
-<XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
-<XPD:ATTR name="Left" type="integer">800</XPD:ATTR>
-<XPD:ATTR name="Top" type="integer">320</XPD:ATTR>
-<XPD:ATTR name="Width" type="integer">391</XPD:ATTR>
-<XPD:ATTR name="Height" type="integer">53</XPD:ATTR>
-<XPD:ATTR name="Text" type="string">Being object-oriented, I've decided not to go with the PokerHandType enum.
-This means that if I view a flush, pair, etc. as a PokerHand my current domain
-model looks like this.
-</XPD:ATTR>
-</XPD:OBJ>
-<XPD:OBJ name="OwnedViews[30]" type="UMLTextView" guid="FHzuhINnJ0aFYsW8teWAbwAA">
+<XPD:OBJ name="OwnedViews[29]" type="UMLTextView" guid="FHzuhINnJ0aFYsW8teWAbwAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
 <XPD:ATTR name="Left" type="integer">232</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">524</XPD:ATTR>
@@ -4133,7 +4122,7 @@ Each user is dealt 5 cards. These cards can be thought of as a hand of cards, bu
 can be classed as one of the PokerHand classes if it satisfies all the conditions of the hand.
 </XPD:ATTR>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[31]" type="UMLClassView" guid="c+mjlZadZUy+RPqMMnIAgwAA">
+<XPD:OBJ name="OwnedViews[30]" type="UMLClassView" guid="c+mjlZadZUy+RPqMMnIAgwAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
 <XPD:ATTR name="Left" type="integer">476</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">288</XPD:ATTR>
@@ -4163,7 +4152,7 @@ can be classed as one of the PokerHand classes if it satisfies all the condition
 <XPD:REF name="Model">Yrpl9nO1Y0CNS6nrV7iOngAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[32]" type="UMLAssociationView" guid="LJ72GTNJDk6Cv84z4jIZ3wAA">
+<XPD:OBJ name="OwnedViews[31]" type="UMLAssociationView" guid="LJ72GTNJDk6Cv84z4jIZ3wAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
 <XPD:ATTR name="LineStyle" type="LineStyleKind">lsRectilinear</XPD:ATTR>
 <XPD:ATTR name="Points" type="Points">703,214;515,214;515,288</XPD:ATTR>
@@ -4247,7 +4236,7 @@ can be classed as one of the PokerHand classes if it satisfies all the condition
 <XPD:REF name="Model">7sm/+3/Nn0+CopgRNsS4UAAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="OwnedViews[33]" type="UMLAssociationView" guid="BD8bKQg9kUmT2dcbG+dISAAA">
+<XPD:OBJ name="OwnedViews[32]" type="UMLAssociationView" guid="BD8bKQg9kUmT2dcbG+dISAAA">
 <XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
 <XPD:ATTR name="LineStyle" type="LineStyleKind">lsRectilinear</XPD:ATTR>
 <XPD:ATTR name="Points" type="Points">555,348;700,348</XPD:ATTR>
@@ -14279,7 +14268,7 @@ the user, we can rename this base class to UserPokerHand
 <XPD:REF name="DiagramOwner">O/+Ow/y+c0WB2YStx00PrgAA</XPD:REF>
 <XPD:OBJ name="DiagramView" type="UMLClassDiagramView" guid="b6VCS7bxk0G320bGB0KrZwAA">
 <XPD:REF name="Diagram">HR6N5LYjpkyA3MkDAlGoiAAA</XPD:REF>
-<XPD:ATTR name="#OwnedViews" type="integer">29</XPD:ATTR>
+<XPD:ATTR name="#OwnedViews" type="integer">30</XPD:ATTR>
 <XPD:OBJ name="OwnedViews[0]" type="RectangleView" guid="SprQEy4HQUCmSttYFbzPxwAA">
 <XPD:ATTR name="Left" type="integer">108</XPD:ATTR>
 <XPD:ATTR name="Top" type="integer">200</XPD:ATTR>
@@ -15463,6 +15452,18 @@ the enumeration classes.
 
 CardDeck may still fall away, because we don't currently have a specification that requires
 that it be present.
+</XPD:ATTR>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedViews[29]" type="UMLTextView" guid="JhgprDRBx02XurqICxojaQAA">
+<XPD:ATTR name="FillColor" type="string">clCream</XPD:ATTR>
+<XPD:ATTR name="FontSize" type="integer">12</XPD:ATTR>
+<XPD:ATTR name="Left" type="integer">160</XPD:ATTR>
+<XPD:ATTR name="Top" type="integer">36</XPD:ATTR>
+<XPD:ATTR name="Width" type="integer">487</XPD:ATTR>
+<XPD:ATTR name="Height" type="integer">71</XPD:ATTR>
+<XPD:ATTR name="Text" type="string">This is the initial design that I will go with.
+From here I'll start writing tests against a couple of focused classes,
+taking a test first, test driven development approach.
 </XPD:ATTR>
 </XPD:OBJ>
 </XPD:OBJ>
