@@ -1,10 +1,5 @@
 ﻿using PokerHandExercise.Classes.HandFactory.HandSpecifications;
 using PokerHandExercise.Classes.Hands;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PokerHandExercise.Classes.HandFactory
 {
@@ -43,10 +38,6 @@ namespace PokerHandExercise.Classes.HandFactory
             PairSpecification pairSpecification = new PairSpecification();
             if (pairSpecification.IsSatisfiedBy(pokerHand))
                 return new Pair(pokerHand);
-
-            //HighCardSpecification highCardSpecification = new HighCardSpecification();
-            //if (highCardSpecification.IsSatisfiedBy(pokerHand))
-            //    return new HighCard(pokerHand);
 
             return new HighCard(pokerHand);
         }

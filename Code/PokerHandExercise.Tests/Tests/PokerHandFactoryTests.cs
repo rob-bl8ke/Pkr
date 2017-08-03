@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PokerHandExercise.Tests.Classes;
 using PokerHandExercise.Classes;
 using PokerHandExercise.Classes.HandFactory;
