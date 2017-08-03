@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace PokerHandExercise.Classes.HandFactory.HandSpecifications
 {
-    internal class FlushSpecification : IPokerHandSpecification
+    internal class FlushSpecification : PokerHandSpecification
     {
-        public bool IsSatisfiedBy(PokerHand pokerHand)
+        public override bool IsSatisfiedBy(PokerHand pokerHand)
         {
             //TODO: careful! Need to check this against a StraightFlush?
-            if (Utility.SameSuite(pokerHand))
+            if (base.SameSuite(pokerHand))
                 return true;
             return false;
         }

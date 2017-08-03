@@ -1,26 +1,16 @@
-﻿using PokerHandExercise.Classes.Hands;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PokerHandExercise.Classes
+namespace PokerHandExercise.Classes.HandFactory.HandSpecifications
 {
-    internal static class Utility
+    internal abstract class PokerHandSpecification
     {
-        public static bool ContainsXofSameKind(PokerHand pokerHand, int num)
-        {
-            var groups = pokerHand.GroupBy(c => c.Value);
-            return groups.Any(g => g.Count() == num);
-        }
+        public abstract bool IsSatisfiedBy(PokerHand pokerHand);
 
-        public static bool SameSuite(PokerHand pokerHand)
-        {
-            return pokerHand.Select(c => c.Suit).Distinct().Count() == 1;
-        }
-
-        public static bool UnbrokenSequence(PokerHand pokerHand)
+        protected bool UnbrokenSequence(PokerHand pokerHand)
         {
             List<int> cards = pokerHand.Select(c => c.Value).Cast<int>().ToList();
             cards.Sort();
@@ -39,6 +29,17 @@ namespace PokerHandExercise.Classes
                 return true;
 
             return false;
+        }
+
+        protected bool ContainsXofSameKind(PokerHand pokerHand, int num)
+        {
+            var groups = pokerHand.GroupBy(c => c.Value);
+            return groups.Any(g => g.Count() == num);
+        }
+
+        protected bool SameSuite(PokerHand pokerHand)
+        {
+            return pokerHand.Select(c => c.Suit).Distinct().Count() == 1;
         }
     }
 }

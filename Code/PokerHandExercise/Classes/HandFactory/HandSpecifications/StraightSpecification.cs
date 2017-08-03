@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace PokerHandExercise.Classes.HandFactory.HandSpecifications
 {
-    internal class StraightSpecification : IPokerHandSpecification
+    internal class StraightSpecification : PokerHandSpecification
     {
-        public bool IsSatisfiedBy(PokerHand pokerHand)
+        public override bool IsSatisfiedBy(PokerHand pokerHand)
         {
-            return Utility.UnbrokenSequence(pokerHand);
+            return base.UnbrokenSequence(pokerHand);
         }
     }
 }

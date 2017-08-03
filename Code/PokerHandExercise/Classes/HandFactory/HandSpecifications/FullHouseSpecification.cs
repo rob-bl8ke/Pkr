@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace PokerHandExercise.Classes.HandFactory.HandSpecifications
 {
-    internal class FullHouseSpecification : IPokerHandSpecification
+    internal class FullHouseSpecification : PokerHandSpecification
     {
         // 3 of the cards have same value, and the other 2 have the same value (suit is irrelevant)
 
-        public bool IsSatisfiedBy(PokerHand pokerHand)
+        public override bool IsSatisfiedBy(PokerHand pokerHand)
         {
             // yes, another layer of indirection... and yet, i want to make it quite
             // explicit as to what this rule does.

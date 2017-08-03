@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace PokerHandExercise.Classes.HandFactory.HandSpecifications
 {
-    internal class TwoPairSpecification : IPokerHandSpecification
+    internal class TwoPairSpecification : PokerHandSpecification
     {
-        public bool IsSatisfiedBy(PokerHand pokerHand)
+        public override bool IsSatisfiedBy(PokerHand pokerHand)
         {
             return TwoPairs(pokerHand);
         }

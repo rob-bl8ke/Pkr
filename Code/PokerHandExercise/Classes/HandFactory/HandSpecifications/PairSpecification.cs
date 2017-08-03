@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace PokerHandExercise.Classes.HandFactory.HandSpecifications
 {
-    internal class PairSpecification : IPokerHandSpecification
+    internal class PairSpecification : PokerHandSpecification
     {
-        public bool IsSatisfiedBy(PokerHand pokerHand)
+        public override bool IsSatisfiedBy(PokerHand pokerHand)
         {
-            return Utility.ContainsXofSameKind(pokerHand, 2);
+            return base.ContainsXofSameKind(pokerHand, 2);
         }
     }
 }
