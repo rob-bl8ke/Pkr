@@ -4,6 +4,9 @@ using PokerHandExercise.Tests.Classes;
 
 namespace PokerHandExercise.Tests.Tests
 {
+    // Apply test driven-development by using the UML class diagram design as a basis for the expected class structure.
+    // Write the test -> Get it to fail -> Implement the code -> Pass the test -> Refactor -> begin again...
+
     [TestClass]
     public class PokerHandComparerTests
     {

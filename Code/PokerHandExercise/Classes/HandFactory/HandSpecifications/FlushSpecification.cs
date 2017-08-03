@@ -10,7 +10,6 @@ namespace PokerHandExercise.Classes.HandFactory.HandSpecifications
     {
         public override bool IsSatisfiedBy(PokerHand pokerHand)
         {
-            //TODO: careful! Need to check this against a StraightFlush?
             if (base.SameSuite(pokerHand))
                 return true;
             return false;

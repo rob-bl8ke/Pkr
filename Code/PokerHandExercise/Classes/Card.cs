@@ -21,7 +21,7 @@ namespace PokerHandExercise.Classes
         }
     }
 
-    public class Card : IComparable<Card>
+    public class Card : IEquatable<Card>, IComparable<Card>
     {
         public static int GetCardWeight(CardValue cardValue)
         {
@@ -54,7 +54,11 @@ namespace PokerHandExercise.Classes
 
         public int CompareTo(Card other)
         {
-            // Note: CompareTo != Equals() in this case. Equals is always more specific.
+            // Note: only compare in values, as suite doesn't change
+            // precedence...
+            if (this.Equals(other))
+                return 0;
+
             int thisVal = (int)this.Value;
             int otherVal = (int)other.Value;
 
@@ -64,6 +68,41 @@ namespace PokerHandExercise.Classes
                 return -1;
             else
                 return 0;
+        }
+
+        public bool Equals(Card other)
+        {
+            if (other != null)
+            {
+                if (this.Suit == other.Suit && this.Value == other.Value)
+                    return true;
+            }
+
+            return false;
+        }
+
+        public override bool Equals(object obj)
+        {
+            // this object is no longer equal on its memory address, so must override GetHashCode().
+            return this.Equals(obj as Card);
+        }
+
+        public override int GetHashCode()
+        {
+            // if two things are equal (Equals(...) == true) then they must return the same value for GetHashCode()
+            // however, this object's properties can change and so it is not immutable. Any change to its properties
+            // could make it that it cannot be found in a dictionary or hashtable.
+
+            //left as is, because it was one of the original classes and i can only extend...
+
+            unchecked
+            {
+                // use a prime numbers to improve uniqueness and avoid collisions
+                int hash = 23;
+                hash = hash * 31 + this.Suit.GetHashCode();
+                hash = hash * 31 + this.Value.GetHashCode();
+                return hash;
+            }
         }
     }
 }

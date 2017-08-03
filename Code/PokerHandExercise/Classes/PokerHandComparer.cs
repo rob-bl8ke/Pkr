@@ -10,7 +10,8 @@ namespace PokerHandExercise.Classes
         {
             //TODO: Pre-condion - both hands must have exactly 5 cards!
 
-            //TODO: Important! : A function like this SHOULD NOT HAVE ANY SIDE-EFFECTS on passed int parameters...
+            //Important! : A function like this SHOULD NOT HAVE ANY SIDE-EFFECTS on passed in parameters from the client...
+            // the client may be expect a certain state afterwards (post-conditions)... best to make a copy.
             PokerHand hand1Copy = CreateCopy(hand1);
             PokerHand hand2Copy = CreateCopy(hand2);
 

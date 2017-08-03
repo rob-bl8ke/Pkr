@@ -8,7 +8,7 @@ using PokerHandExercise.Classes.Hands;
 namespace PokerHandExercise.Tests.Tests
 {
 
-    // In line with the conceptual design lets first comment out the original comparer tests, and use InternalsVisibleTo to
+    // In line with the conceptual design, first comment out the original comparer tests, and use InternalsVisibleTo to
     // ensure that the internal abstract factory returns us the correct "specified poker hand". It's a good starting
     // point and sanity check. Once done, one can concentrate on the comparisons.
 
