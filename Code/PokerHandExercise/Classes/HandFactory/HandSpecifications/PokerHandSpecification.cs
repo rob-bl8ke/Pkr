@@ -13,20 +13,10 @@ namespace PokerHandExercise.Classes.HandFactory.HandSpecifications
             List<int> cards = pokerHand.Select(c => c.Value).Cast<int>().ToList();
             cards.Sort(); // just in case...
 
-            int lowest = cards.First();
-            int secondLowest = cards.Skip(1).First();
-            int highest = cards.Last();
-
-            if (lowest == 1 && secondLowest == 10 && highest == 13)
+            if (cards.First() == 1)
                 return IsSequenced(cards, 1, 4);
-
-            if (lowest == 1 && secondLowest == 2 && highest == 5)
+            else
                 return IsSequenced(cards, 0, 4);
-
-            if (lowest > 1 && highest == lowest + 4)
-                return IsSequenced(cards, 0, 4);
-
-            return false;
         }
 
         protected bool ContainsXofSameKind(PokerHand pokerHand, int num)
@@ -42,7 +32,7 @@ namespace PokerHandExercise.Classes.HandFactory.HandSpecifications
 
         private bool IsSequenced(List<int> cards, int start, int end)
         {
-            for (int x = start; x != end - 1; x++)
+            for (int x = start; x < end; x++)
             {
                 if (cards[x + 1] != cards[x] + 1)
                     return false;
