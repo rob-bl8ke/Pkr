@@ -11,6 +11,16 @@ namespace PokerHandExercise.Classes.Hands
         public int Weighting { get; protected set; }
         protected readonly PokerHand pokerHand;
 
+        public int NoOfCards
+        {
+            get
+            {
+                if (pokerHand == null)
+                    return 0;
+                return pokerHand.Count();
+            }
+        }
+
         public Card this[int x]
         {
             //TODO: thinks about what happens when this is out of bounds!

@@ -32,30 +32,12 @@ namespace PokerHandExercise.Classes.Hands
                     return Utility.CompareSingleCard(this.HighPairValue, otherPair.HighPairValue);
 
                 else
-                    return CompareHighToLowCards(other);
+                    return Utility.CompareHighToLowCards(this, other);
             }
             else
             {
                 return base.CompareTo(other);
             }
-        }
-
-        private int CompareHighToLowCards(SpecifiedPokerHand other)
-        {
-            for (int x = 0; x < this.pokerHand.Count; x++)
-            {
-                if (this[x].Value == CardValue.Ace && other[x].Value != CardValue.Ace)
-                    return 1;
-                else if (other[x].Value == CardValue.Ace && this[x].Value != CardValue.Ace)
-                    return -1;
-
-                int val = this[x].CompareTo(other[x]);
-
-                if (val != 0)
-                    return val;
-            }
-
-            return 0;
         }
     }
 }
