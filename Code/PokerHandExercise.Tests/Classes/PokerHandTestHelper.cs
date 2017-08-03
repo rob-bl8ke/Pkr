@@ -248,5 +248,13 @@ namespace PokerHandExercise.Tests.Classes
             }
             return result;
         }
+
+        public static PokerHand CreateHand(params Card[] cards)
+        {
+            var result = new PokerHand();
+            result.AddRange(cards);
+
+            return result;
+        }
     }
 }

@@ -508,6 +508,54 @@ namespace PokerHandExercise.Tests.Tests
             Assert.AreEqual(1, result, "Expected Hand1 to beat Hand2");
         }
 
+        [TestMethod]
+        [TestCategory("High Card")]
+        public void Comparer_WhenComparing_1stLow_HighCard_ToHigherHighCard_Ensures_Lower_Loses()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateLowHighCard();
+            var pokerHand2 = PokerHandTestHelper.CreateHighHighCard();
+
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(-1, result, "Expected Hand1 to lose to Hand2");
+        }
+
+        [TestMethod]
+        [TestCategory("High Card")]
+        public void Comparer_WhenComparing_MatchingHighCard_ToMatchHighCard_Ensures_A_Tie()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateHighHighCard();
+            var pokerHand2 = PokerHandTestHelper.CreateHighHighCard();
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(0, result, "Expected Hand1 and Hand2 be equivalent");
+        }
+
+        [TestMethod]
+        [TestCategory("High Card")]
+        public void Comparer_WhenComparing_MatchingHighCard_ToMatchHighCard_DifferentOrder_Ensures_A_Tie()
+        {
+            var pokerHand1 = PokerHandTestHelper.CreateHand(
+                
+                new Card(CardSuit.Club, CardValue.Jack),
+                new Card(CardSuit.Club, CardValue.Queen),
+                new Card(CardSuit.Club, CardValue.Nine),
+                new Card(CardSuit.Club, CardValue.Ten),
+                new Card(CardSuit.Club, CardValue.King)
+                );
+
+            var pokerHand2 = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Club, CardValue.Queen),
+                new Card(CardSuit.Club, CardValue.Ten),
+                new Card(CardSuit.Club, CardValue.Jack),
+                new Card(CardSuit.Club, CardValue.King),
+                new Card(CardSuit.Club, CardValue.Nine)
+                );
+
+            var result = _comparer.CompareHands(pokerHand1, pokerHand2);
+            Assert.AreEqual(0, result, "Expected Hand1 and Hand2 be equivalent");
+        }
+
         #endregion
 
         #region Weighting (Tests on Hand-vs-Hand Precedence)
