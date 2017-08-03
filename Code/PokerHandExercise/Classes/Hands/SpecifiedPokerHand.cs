@@ -58,18 +58,12 @@ namespace PokerHandExercise.Classes.Hands
 
         protected int CompareSingleCard(CardValue myValue, CardValue otherValue)
         {
-            int myWeighting = GetCardWeighting(myValue);
-            int otherWeighting = GetCardWeighting(otherValue);
+            // this coupling is completely ok since Card is already coupled to this base class
+            // through method parameters.
+            int myWeighting = Card.GetCardWeight(myValue);
+            int otherWeighting = Card.GetCardWeight(otherValue);
 
             return myWeighting.CompareTo(otherWeighting);
-        }
-
-        protected int GetCardWeighting(CardValue cardValue)
-        {
-            if (cardValue == CardValue.Ace)
-                return 1000;
-            else
-                return ((int)cardValue);
         }
 
         protected int CompareHighToLowCards(Card[] theseCards, Card[] otherCards)

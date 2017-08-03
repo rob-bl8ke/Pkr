@@ -1,10 +1,36 @@
 ﻿
 using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace PokerHandExercise.Classes
 {
+    public class HighAceCardComparer : IComparer<Card>, IComparer
+    {
+        public int Compare(Card x, Card y)
+        {
+            int myWeighting = Card.GetCardWeight(x.Value);
+            int otherWeighting = Card.GetCardWeight(y.Value);
+
+            return myWeighting.CompareTo(otherWeighting);
+        }
+
+        int IComparer.Compare(object x, object y)
+        {
+            return Compare((Card)x, (Card)y);
+        }
+    }
+
     public class Card : IComparable<Card>
     {
+        public static int GetCardWeight(CardValue cardValue)
+        {
+            if (cardValue == CardValue.Ace)
+                return 1000;
+            else
+                return ((int)cardValue);
+        }
+
         public CardSuit Suit { get; set; }
         public CardValue Value { get; set; }
 

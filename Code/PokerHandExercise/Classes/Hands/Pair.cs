@@ -32,7 +32,15 @@ namespace PokerHandExercise.Classes.Hands
                     return base.CompareSingleCard(this.HighPairValue, otherPair.HighPairValue);
 
                 else
-                    return base.CompareHighToLowCards(this, other);
+                {
+                    List<Card> theseCards = this.Cards.Where(c => c.Value != this.HighPairValue).ToList();
+                    List<Card> otherCards = other.Cards.Where(c => c.Value != otherPair.HighPairValue).ToList();
+
+                    theseCards.Sort(new HighAceCardComparer());
+                    otherCards.Sort(new HighAceCardComparer());
+
+                    return base.CompareHighToLowCards(theseCards.ToArray(), otherCards.ToArray());
+                }
             }
             else
             {
