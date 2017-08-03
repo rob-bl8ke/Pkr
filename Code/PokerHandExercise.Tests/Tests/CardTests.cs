@@ -7,6 +7,8 @@ namespace PokerHandExercise.Tests.Tests
     public class CardTests
     {
         [TestMethod]
+        [TestCategory("Card")]
+        [TestCategory("Equality")]
         public void Ensure_CardsEqualThemselves()
         {
             Card kingOfSpadesCard_1 = new Card(CardSuit.Spade, CardValue.King);
@@ -17,6 +19,8 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
+        [TestCategory("Card")]
+        [TestCategory("Equality")]
         public void Ensure_CardNotEqualToOtherCard_WhenSuitesAreDifferent()
         {
             Card kingOfSpadesCard_1 = new Card(CardSuit.Heart, CardValue.King);
@@ -27,6 +31,8 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
+        [TestCategory("Card")]
+        [TestCategory("Equality")]
         public void Ensure_CardNotEqualToOtherCard_WhenValueIsDifferent()
         {
             Card kingOfSpadesCard_1 = new Card(CardSuit.Spade, CardValue.Queen);
@@ -37,6 +43,8 @@ namespace PokerHandExercise.Tests.Tests
         }
 
         [TestMethod]
+        [TestCategory("Card")]
+        [TestCategory("Equality")]
         public void Ensure_CardNotEqualToOtherCard_WhenSuiteAndValueIsDifferent()
         {
             Card kingOfSpadesCard_1 = new Card(CardSuit.Heart, CardValue.Queen);

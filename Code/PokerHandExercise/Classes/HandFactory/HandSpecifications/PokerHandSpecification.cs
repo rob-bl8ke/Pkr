@@ -44,7 +44,6 @@ namespace PokerHandExercise.Classes.HandFactory.HandSpecifications
         {
             for (int x = start; x != end - 1; x++)
             {
-                int nextNum = cards[x];
                 if (cards[x + 1] != cards[x] + 1)
                     return false;
             }
