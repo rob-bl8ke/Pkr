@@ -8,12 +8,12 @@ namespace PokerHandExercise.Classes.Hands
 {
     internal class Pair : SpecifiedPokerHand
     {
-        public Card HighPair
+        public CardValue HighPairValue
         {
             get
             {
                 var groups = pokerHand.GroupBy(c => c.Value);
-                return groups.Where(g => g.Count() == 2).Max(g => g.First());
+                return groups.Where(g => g.Count() == 2).Max(g => g.First()).Value;
             }
         }
 
@@ -28,37 +28,34 @@ namespace PokerHandExercise.Classes.Hands
             {
                 Pair otherPair = other as Pair;
 
-                if (this.HighPair.Value != otherPair.HighPair.Value)
-                {
-                    if (this.HighPair.Value == CardValue.Ace && otherPair.HighPair.Value != CardValue.Ace)
-                        return 1;
-                    else if (this.HighPair.Value != CardValue.Ace && otherPair.HighPair.Value == CardValue.Ace)
-                        return -1;
-                    else
-                        return this.HighPair.CompareTo(otherPair.HighPair);
-                } 
+                if (this.HighPairValue != otherPair.HighPairValue)
+                    return Utility.CompareSingleCard(this.HighPairValue, otherPair.HighPairValue);
+
                 else
-                {
-                    for (int x = 0; x < this.pokerHand.Count; x++)
-                    {
-                        if (this[x].Value == CardValue.Ace && other[x].Value != CardValue.Ace)
-                            return 1;
-                        else if (other[x].Value == CardValue.Ace && this[x].Value != CardValue.Ace)
-                            return -1;
-                        
-                        int val = this[x].CompareTo(other[x]);
-
-                        if (val != 0)
-                            return val;
-                    }
-
-                    return 0;
-                }
+                    return CompareHighToLowCards(other);
             }
             else
             {
                 return base.CompareTo(other);
             }
+        }
+
+        private int CompareHighToLowCards(SpecifiedPokerHand other)
+        {
+            for (int x = 0; x < this.pokerHand.Count; x++)
+            {
+                if (this[x].Value == CardValue.Ace && other[x].Value != CardValue.Ace)
+                    return 1;
+                else if (other[x].Value == CardValue.Ace && this[x].Value != CardValue.Ace)
+                    return -1;
+
+                int val = this[x].CompareTo(other[x]);
+
+                if (val != 0)
+                    return val;
+            }
+
+            return 0;
         }
     }
 }

@@ -39,5 +39,21 @@ namespace PokerHandExercise.Classes
 
             return false;
         }
+
+        public static int CompareSingleCard(CardValue myValue, CardValue otherValue)
+        {
+            int myWeighting = GetCardValueWeighting(myValue);
+            int otherWeighting = GetCardValueWeighting(otherValue);
+
+            return myWeighting.CompareTo(otherWeighting);
+        }
+
+        public static int GetCardValueWeighting(CardValue cardValue)
+        {
+            if (cardValue == CardValue.Ace)
+                return 1000;
+            else
+                return ((int)cardValue);
+        }
     }
 }

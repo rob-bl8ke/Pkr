@@ -13,7 +13,7 @@ namespace PokerHandExercise.Classes.Hands
             get
             {
                 var pairs = pokerHand.GroupBy(c => c.Value)
-                    .Select(g => new { Key = g.Key, Weighting = GetCardValueWeighting(g.Key), Count = g.Count() })
+                    .Select(g => new { Key = g.Key, Weighting = Utility.GetCardValueWeighting(g.Key), Count = g.Count() })
                     .Where( o => o.Count == 2);
 
                 var highestPair = pairs.Single(o => o.Weighting == pairs.Select(o1 => o1.Weighting).Max());
@@ -27,7 +27,7 @@ namespace PokerHandExercise.Classes.Hands
             get
             {
                 var pairs = pokerHand.GroupBy(c => c.Value)
-                    .Select(g => new { Key = g.Key, Weighting = GetCardValueWeighting(g.Key), Count = g.Count() })
+                    .Select(g => new { Key = g.Key, Weighting = Utility.GetCardValueWeighting(g.Key), Count = g.Count() })
                     .Where(o => o.Count == 2);
 
                 var lowestPair = pairs.Single(o => o.Weighting == pairs.Select(o1 => o1.Weighting).Min());
@@ -57,13 +57,13 @@ namespace PokerHandExercise.Classes.Hands
                 TwoPair otherTwoPair = other as TwoPair;
 
                 if (this.HighestPairValue != otherTwoPair.HighestPairValue)
-                    return CompareSingleCard(this.HighestPairValue, otherTwoPair.HighestPairValue);
+                    return Utility.CompareSingleCard(this.HighestPairValue, otherTwoPair.HighestPairValue);
                 
                 else if (this.LowestPairValue != otherTwoPair.LowestPairValue)
-                    return CompareSingleCard(this.LowestPairValue, otherTwoPair.LowestPairValue);
+                    return Utility.CompareSingleCard(this.LowestPairValue, otherTwoPair.LowestPairValue);
                 
                 else if (this.FifthCard.Value != otherTwoPair.FifthCard.Value)
-                    return CompareSingleCard(this.FifthCard.Value, otherTwoPair.FifthCard.Value);
+                    return Utility.CompareSingleCard(this.FifthCard.Value, otherTwoPair.FifthCard.Value);
                 
                 else
                     return 0;
@@ -72,22 +72,6 @@ namespace PokerHandExercise.Classes.Hands
             {
                 return base.CompareTo(other);
             }
-        }
-
-        private int CompareSingleCard(CardValue myValue, CardValue otherValue)
-        {
-            int myWeighting = GetCardValueWeighting(myValue);
-            int otherWeighting = GetCardValueWeighting(otherValue);
-
-            return myWeighting.CompareTo(otherWeighting);
-        }
-
-        private int GetCardValueWeighting(CardValue cardValue)
-        {
-            if (cardValue == CardValue.Ace)
-                return 1000;
-            else
-                return ((int)cardValue);
         }
     }
 }
