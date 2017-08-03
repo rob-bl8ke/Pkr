@@ -8,7 +8,7 @@ namespace PokerHandExercise.Classes.Hands
 {
     internal class ThreeOfAKind : SpecifiedPokerHand
     {
-        public CardValue HighCard
+        public CardValue HighCardValue
         {
             get
             {
@@ -22,28 +22,15 @@ namespace PokerHandExercise.Classes.Hands
             base.Weighting = 4;
         }
 
-
         public override int CompareTo(SpecifiedPokerHand other)
         {
             if (other is ThreeOfAKind)
             {
-                ThreeOfAKind threeOfAKind = other as ThreeOfAKind;
-
-                if (this.HighCard == CardValue.Ace && threeOfAKind.HighCard != CardValue.Ace)
-                    return 1;
-                if (threeOfAKind.HighCard == CardValue.Ace && this.HighCard != CardValue.Ace)
-                    return -1;
-                else if (this.HighCard > threeOfAKind.HighCard)
-                    return 1;
-                else if (this.HighCard < threeOfAKind.HighCard)
-                    return -1;
-                else
-                    return 0;
+                ThreeOfAKind otherThreeOfAKind = other as ThreeOfAKind;
+                return base.CompareSingleCard(this.HighCardValue, otherThreeOfAKind.HighCardValue);
             }
             else
-            {
                 return base.CompareTo(other);
-            }
         }
     }
 }

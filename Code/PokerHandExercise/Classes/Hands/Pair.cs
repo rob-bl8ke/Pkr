@@ -29,10 +29,10 @@ namespace PokerHandExercise.Classes.Hands
                 Pair otherPair = other as Pair;
 
                 if (this.HighPairValue != otherPair.HighPairValue)
-                    return Utility.CompareSingleCard(this.HighPairValue, otherPair.HighPairValue);
+                    return base.CompareSingleCard(this.HighPairValue, otherPair.HighPairValue);
 
                 else
-                    return Utility.CompareHighToLowCards(this, other);
+                    return base.CompareHighToLowCards(this, other);
             }
             else
             {

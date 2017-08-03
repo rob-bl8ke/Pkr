@@ -42,5 +42,39 @@ namespace PokerHandExercise.Classes.Hands
             else
                 return 0;
         }
+
+        protected int CompareSingleCard(CardValue myValue, CardValue otherValue)
+        {
+            int myWeighting = GetCardValueWeighting(myValue);
+            int otherWeighting = GetCardValueWeighting(otherValue);
+
+            return myWeighting.CompareTo(otherWeighting);
+        }
+
+        protected int GetCardValueWeighting(CardValue cardValue)
+        {
+            if (cardValue == CardValue.Ace)
+                return 1000;
+            else
+                return ((int)cardValue);
+        }
+
+        protected int CompareHighToLowCards(SpecifiedPokerHand thisHand, SpecifiedPokerHand otherHand)
+        {
+            for (int x = 0; x < thisHand.NoOfCards; x++)
+            {
+                if (thisHand[x].Value == CardValue.Ace && otherHand[x].Value != CardValue.Ace)
+                    return 1;
+                else if (otherHand[x].Value == CardValue.Ace && thisHand[x].Value != CardValue.Ace)
+                    return -1;
+
+                int val = thisHand[x].CompareTo(otherHand[x]);
+
+                if (val != 0)
+                    return val;
+            }
+
+            return 0;
+        }
     }
 }

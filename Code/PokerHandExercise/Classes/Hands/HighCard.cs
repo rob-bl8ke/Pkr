@@ -16,7 +16,7 @@ namespace PokerHandExercise.Classes.Hands
         public override int CompareTo(SpecifiedPokerHand other)
         {
             if (other is HighCard)
-                return Utility.CompareHighToLowCards(this, other);
+                return base.CompareHighToLowCards(this, other);
 
             else
                 return base.CompareTo(other);
