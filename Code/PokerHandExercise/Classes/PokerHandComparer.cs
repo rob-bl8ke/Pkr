@@ -2,6 +2,7 @@
 using PokerHandExercise.Classes.Exceptions;
 using PokerHandExercise.Classes.HandFactory;
 using PokerHandExercise.Classes.Hands;
+using System;
 
 namespace PokerHandExercise.Classes
 {
@@ -32,7 +33,7 @@ namespace PokerHandExercise.Classes
                 // Any necessary logging here...
                 throw;
             }
-            catch (UnknownPokerComparisonException ex)
+            catch (Exception ex)
             {
                 // Any necessary logging here...
                 throw new UnknownPokerComparisonException("An unknown exception occurred while trying to compare poker hands.", ex);

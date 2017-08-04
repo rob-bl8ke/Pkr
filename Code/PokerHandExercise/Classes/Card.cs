@@ -59,15 +59,7 @@ namespace PokerHandExercise.Classes
             if (this.Equals(other))
                 return 0;
 
-            int thisVal = (int)this.Value;
-            int otherVal = (int)other.Value;
-
-            if (thisVal > otherVal)
-                return 1;
-            else if (thisVal < otherVal)
-                return -1;
-            else
-                return 0;
+            return this.Value.CompareTo(other.Value);
         }
 
         public bool Equals(Card other)
@@ -86,6 +78,20 @@ namespace PokerHandExercise.Classes
             // this object is no longer equal on its memory address, so must override GetHashCode().
             return this.Equals(obj as Card);
         }
+
+        // --------------------------------------------------------------------------------------------------------------
+        // Note on Operator Overloading: 
+        // --------------------------------------------------------------------------------------------------------------
+        // One can also override the operators == and !=. 
+        // Even overload > >= <= < in
+        // order to get closer to, perhaps, a DSL type approach. I've held off on these concepts purely because I'm
+        // not sure, at this point whether we need to track the existence (identity) of cards within this current 
+        // system.
+        // If we do, then this extra functionality might prove to be beneficial in simplifying some of the code.
+        // It's not a requirement of present, so I've left it out for now. 
+        // 
+        // Same goes for the poker hand.
+        // --------------------------------------------------------------------------------------------------------------
 
         public override int GetHashCode()
         {
