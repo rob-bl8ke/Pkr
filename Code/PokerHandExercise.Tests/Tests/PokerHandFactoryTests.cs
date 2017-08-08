@@ -181,6 +181,40 @@ namespace PokerHandExercise.Tests.Tests
             Assert.IsTrue(SpecifiedPokerHand(PokerHandTestHelper.CreateHighStraight()) is Straight);
         }
 
+        [TestMethod]
+        [TestCategory("Straight")]
+        [TestCategory("PokerHandFactory Tests")]
+        public void Factory_WhenPassed_A_Sequence_Combination_WithGap_Between_Low_Ace_And_Rest_DoesNotReturn_A_Straight()
+        {
+            var pokerHand = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Club, CardValue.Ace),
+                new Card(CardSuit.Diamond, CardValue.Three),
+                new Card(CardSuit.Club, CardValue.Four),
+                new Card(CardSuit.Heart, CardValue.Five),
+                new Card(CardSuit.Club, CardValue.Six)
+                );
+
+            Assert.IsTrue(!(SpecifiedPokerHand(pokerHand) is Straight));
+            Assert.IsNotInstanceOfType(SpecifiedPokerHand(pokerHand), typeof(Straight));
+        }
+
+        [TestMethod]
+        [TestCategory("Straight")]
+        [TestCategory("PokerHandFactory Tests")]
+        public void Factory_WhenPassed_A_Sequence_Combination_WithGap_Between_High_Ace_And_Rest_DoesNotReturn_A_Straight()
+        {
+            var pokerHand = PokerHandTestHelper.CreateHand(
+                new Card(CardSuit.Club, CardValue.Ace),
+                new Card(CardSuit.Diamond, CardValue.Nine),
+                new Card(CardSuit.Club, CardValue.Ten),
+                new Card(CardSuit.Heart, CardValue.Jack),
+                new Card(CardSuit.Club, CardValue.Queen)
+                );
+
+            Assert.IsFalse(SpecifiedPokerHand(pokerHand) is Straight);
+            Assert.IsNotInstanceOfType(SpecifiedPokerHand(pokerHand), typeof(Straight));
+        }
+
         #endregion
 
         #region Flush Tests

@@ -14,7 +14,12 @@ namespace PokerHandExercise.Classes.HandFactory.HandSpecifications
             cards.Sort(); // just in case...
 
             if (cards.First() == 1)
-                return IsSequenced(cards, 1, 4);
+            {
+                if (cards.Skip(1).First() == 2)
+                    return IsSequenced(cards, 1, 4);
+                else
+                    return IsSequenced(cards, 1, 4) && cards[4] == 13;
+            }
             else
                 return IsSequenced(cards, 0, 4);
         }
@@ -30,7 +35,7 @@ namespace PokerHandExercise.Classes.HandFactory.HandSpecifications
             return pokerHand.Select(c => c.Suit).Distinct().Count() == 1;
         }
 
-        private bool IsSequenced(List<int> cards, int start, int end)
+        protected bool IsSequenced(List<int> cards, int start, int end)
         {
             for (int x = start; x < end; x++)
             {
